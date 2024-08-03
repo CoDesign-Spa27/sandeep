@@ -81,7 +81,7 @@ function Home() {
           </motion.div>
 
           <div className="md:text-xl font-switzer">
-            I'm a <FlipWords className="font-bold font-switzer text-[#73C8A9]" words={words} /> <br />
+            I&apos;m a <FlipWords className="font-bold font-switzer text-[#73C8A9]" words={words} /> <br />
             I possess strong problem-solving skills and specialize in crafting exceptional digital experiences.
           </div>
 
