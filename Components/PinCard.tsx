@@ -29,7 +29,7 @@ export function PinCard({name,desc,image,title,link}:ProjectCard) {
           </div>
           <div className="flex flex-1  rounded-lg mt-4  bg-white ">
         
-       <Image src={image} width={400} className="object-cover rounded-lg"  height={400} alt="Image" />
+ 
           </div>
         </div>
       </PinContainer>
