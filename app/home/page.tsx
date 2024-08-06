@@ -7,6 +7,7 @@ import GITHUB from '@/public/github.svg';
 import X from '@/public/X.svg';
 import LINKEDIN from '@/public/linkedin.svg';
 import GMAIL from '@/public/gmail.svg';
+import { ProjectSection } from "@/Components/ProjectSection";
 
 function Home() {
   const words = ["Fullstack Developer.", "Proficient Frontend.", "Software Developer."];
@@ -90,6 +91,7 @@ function Home() {
           </div>
         </div>
       </HeroHighlight>
+      <ProjectSection />
     </div>
   );
 }
