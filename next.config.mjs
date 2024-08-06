@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-import path from 'path';
 const nextConfig = {
     webpack: (config, { isServer }) => {
         // Example: Fixes packages that depend on `fs` module
@@ -8,9 +7,7 @@ const nextConfig = {
         }
         return config;
       },
-      sassOptions: {
-        includePaths: [path.join(__dirname, 'styles')],
-      },
+      
 
     eslint: {
         ignoreDuringBuilds: true,
