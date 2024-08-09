@@ -12,10 +12,10 @@ export function ProjectSection() {
     <div className="py-20 bg-black">
       <h1
         className="text-center text-4xl lg:text-5xl font-switzer 
-      md:py-5 bg-clip-text text-transparent bg-gradient-to-b from-gray-500 to-gray-200
+      md:py-5 bg-clip-text text-transparent bg-gradient-to-b from-gray-500 to-gray-100
       font-extrabold"
       >
-        Recent <span className="text-[#73c8a9]">Projects</span>. Please
+        Recent <span className="bg-gradient-to-r from-[#73c8a9]  via-purple-500 to-pink-400 text-transparent bg-clip-text bg-300% animate-gradient">Projects</span>. Please
         Checkout!
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
