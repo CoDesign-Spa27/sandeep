@@ -1,12 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
-import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
-import { FlipWords } from "@/components/ui/flip-words";
-import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import GITHUB from "@/public/github.svg";
 import X from "@/public/X.svg";
 import LINKEDIN from "@/public/linkedin.svg";
 import GMAIL from "@/public/gmail.svg";
+import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
+import { FlipWords } from "@/components/ui/flip-words";
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { ProjectSection } from "@/components/ProjectSection";
 
 function Home() {
