@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { FloatingNav } from "@/components/ui/floating-navbar";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import { ModeToggle } from "@/components/mode-toggle";
+import { FloatingNav } from "@/components/ui/floating-navbar";
 export function Header() {
   const navItems = [
     {
