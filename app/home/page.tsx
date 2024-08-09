@@ -1,37 +1,41 @@
 "use client";
 import { motion } from "framer-motion";
-import { HeroHighlight, Highlight } from "@/Components/ui/hero-highlight";
-import { FlipWords } from "@/Components/ui/flip-words";
-import { AnimatedTooltip } from "@/Components/ui/animated-tooltip";
-import GITHUB from '@/public/github.svg';
-import X from '@/public/X.svg';
-import LINKEDIN from '@/public/linkedin.svg';
-import GMAIL from '@/public/gmail.svg';
-import { ProjectSection } from "@/Components/ProjectSection";
+import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
+import { FlipWords } from "@/components/ui/flip-words";
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
+import GITHUB from "@/public/github.svg";
+import X from "@/public/X.svg";
+import LINKEDIN from "@/public/linkedin.svg";
+import GMAIL from "@/public/gmail.svg";
+import { ProjectSection } from "@/components/ProjectSection";
 
 function Home() {
-  const words = ["Fullstack Developer.", "Proficient Frontend.", "Software Developer."];
+  const words = [
+    "Fullstack Developer.",
+    "Proficient Frontend.",
+    "Software Developer.",
+  ];
   const social = [
     {
       id: 1,
-      name: 'CoDesign-Spa27',
-      image: GITHUB
+      name: "CoDesign-Spa27",
+      image: GITHUB,
     },
     {
       id: 2,
-      name: 'sandeep_code28',
-      image: X
+      name: "sandeep_code28",
+      image: X,
     },
     {
       id: 3,
-      name: 'Sandeep Singh',
-      image: LINKEDIN
+      name: "Sandeep Singh",
+      image: LINKEDIN,
     },
     {
       id: 4,
-      name: 'dev.sandeepsingh28@gmail.com',
-      image: GMAIL
-    }
+      name: "dev.sandeepsingh28@gmail.com",
+      image: GMAIL,
+    },
   ];
 
   return (
@@ -57,7 +61,10 @@ function Home() {
             className="font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug"
           >
             <div className="md:text-5xl lg:text-6xl text-4xl font-switzer font-bold">
-              <Highlight className="text-black dark:text-white">Sandeep Singh</Highlight>.
+              <Highlight className="text-black dark:text-white">
+                Sandeep Singh
+              </Highlight>
+              .
             </div>
           </motion.h1>
 
@@ -82,8 +89,13 @@ function Home() {
           </motion.div>
 
           <div className="md:text-xl font-switzer">
-            I&apos;m a <FlipWords className="font-bold font-switzer text-[#73C8A9]" words={words} /> <br />
-            I possess strong problem-solving skills and specialize in crafting exceptional digital experiences.
+            I&apos;m a{" "}
+            <FlipWords
+              className="font-bold font-switzer text-[#73C8A9]"
+              words={words}
+            />{" "}
+            <br />I possess strong problem-solving skills and specialize in
+            crafting exceptional digital experiences.
           </div>
 
           <div className="py-4">

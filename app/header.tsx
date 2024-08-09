@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { FloatingNav } from "@/Components/ui/floating-navbar";
+import { FloatingNav } from "@/components/ui/floating-navbar";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
-import { ModeToggle } from "@/Components/mode-toggle";
+import { ModeToggle } from "@/components/mode-toggle";
 export function Header() {
   const navItems = [
     {
@@ -29,5 +29,3 @@ export function Header() {
     </div>
   );
 }
- 
- 
