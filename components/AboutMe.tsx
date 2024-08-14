@@ -38,11 +38,11 @@ export const AboutMe = () => {
   return (
     <div
       ref={ref}
-      className="w-full rounded-md bg-neutral-950 relative flex flex-col antialiased"
+      className="w-full rounded-md dark:bg-black bg-[#ECE7E1] relative flex flex-col antialiased"
     >
       <div className="max-w-7xl mx-auto p-10">
         <motion.div
-          className="text-3xl md:text-5xl lg:text-6xl font-bold font-switzer mb-4 text-white"
+          className="text-3xl md:text-5xl lg:text-6xl font-bold font-switzer mb-4 dark:text-white"
           initial="hidden"
           animate={controls}
           variants={popUpVariants} // Apply pop-up animation to the header
@@ -59,7 +59,7 @@ export const AboutMe = () => {
               duration: 1,
               ease: "easeInOut",
             }}
-            className="h-[0.1rem] bg-[#73C8A9] mt-2"
+            className="h-[0.2rem] animate-gradient bg-300% bg-gradient-to-r from-violet-500 via-blue-500 to-pink-500 mt-2"
           />
         </motion.div>
         <motion.div
@@ -69,14 +69,14 @@ export const AboutMe = () => {
           variants={popUpVariants} // Apply pop-up animation to the content grid
         >
           <div className="space-y-6">
-            <div className="text-sm sm:text-lg md:text-xl leading-relaxed">
+            <div className="text-sm sm:text-lg dark:text-white text-black md:text-lg leading-relaxed">
               <span className="font-semibold text-2xl text-purple-400">Hello! I'm Sandeep Singh,</span> a passionate and innovative full-stack developer with a knack for crafting seamless digital experiences.
               <br />
               <br />
               With expertise in both front-end and back-end technologies, I thrive on bringing ideas to life and solving complex problems with elegant solutions.
             </div>
-            <div className="text-sm sm:text-lg md:text-xl leading-relaxed">
-              <span className="font-semibold text-2xl text-[#73C8A9]">My Journey</span>
+            <div className="text-sm sm:text-lg  dark:text-white text-black md:text-lg leading-relaxed">
+              <span className="font-semibold text-2xl text-yellow-300">My Journey</span>
               <br />
               I embarked on my journey in software development with a curiosity for how things work behind the scenes.
               <br />
@@ -85,9 +85,9 @@ export const AboutMe = () => {
               My commitment to continuous learning ensures that I stay updated with the latest industry trends and tools.
             </div>
           </div>
-          <div className="space-y-4 p-5 md:block hidden md:p-0">
+          <div className="space-y-4 p-5  dark:text-white text-black md:block hidden md:p-0">
             <div className="text-2xl text-pink-400 font-bold mb-4">What I Do</div>
-            <div className="text-sm sm:text-lg md:text-xl leading-relaxed">
+            <div className="text-sm sm:text-lg md:text-lg leading-relaxed">
               As a full-stack developer, I enjoy working on all aspects of web development. Whether it's designing intuitive user interfaces, building robust server-side logic, or optimizing database performance, I approach each task with creativity and precision.
               <br />
               <br />

@@ -9,10 +9,10 @@ import Image from "next/image";
 
 export function ProjectSection() {
   return (
-    <div className="py-20 bg-black">
+    <div className="py-20 dark:bg-black bg-[#ECE7E1]">
       <h1
         className="text-center text-4xl lg:text-5xl font-switzer 
-      md:py-5 bg-clip-text text-transparent bg-gradient-to-b from-gray-500 to-gray-100
+      md:py-5 bg-clip-text dark:text-transparent text-black dark:bg-gradient-to-b dark:from-gray-500 dark:to-gray-100
       font-extrabold"
       >
         Recent <span className="bg-gradient-to-r from-[#73c8a9]  via-purple-500 to-pink-400 text-transparent bg-clip-text bg-300% animate-gradient">Projects</span>. Please
@@ -22,7 +22,7 @@ export function ProjectSection() {
         {projects.map((item) => (
           <Link href={item.link} key={item.id} target="_blank">
           <div
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+            className="lg:min-h-[32.5rem] h-[25rem]  flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
           >
               <PinContainer title={item.title} href={item.link}>

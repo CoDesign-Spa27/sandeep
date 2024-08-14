@@ -65,6 +65,10 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        'gradient-x': {
+          '0%, 100%': { 'background-position': '0% 50%' },
+          '50%': { 'background-position': '100% 50%' },
+        },
         animatedgradient: {
           '0%': { backgroundPosition: '0% 50%' },
           '50%': { backgroundPosition: '100% 50%' },
@@ -91,8 +95,10 @@ const config = {
       },
       backgroundSize: {
         '300%': '300%',
+        '200%': '200% 200%',
       },
       animation: {
+        'gradient-x': 'gradient-x 5s ease infinite',
         gradient: 'animatedgradient 6s ease infinite alternate',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
