@@ -56,8 +56,11 @@ export default function RootLayout({
     <html lang="en" className={`${switzer.variable} ${inter.variable}`}>
       <body >
         <Providers>
+        
+
           <Header />
           {children}
+         
         </Providers>
       </body>
     </html>

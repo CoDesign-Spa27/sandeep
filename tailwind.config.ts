@@ -65,6 +65,14 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        aurora: {
+          from: {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          to: {
+            backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
         'gradient-x': {
           '0%, 100%': { 'background-position': '0% 50%' },
           '50%': { 'background-position': '100% 50%' },
@@ -98,6 +106,7 @@ const config = {
         '200%': '200% 200%',
       },
       animation: {
+        aurora: "aurora 60s linear infinite",
         'gradient-x': 'gradient-x 5s ease infinite',
         gradient: 'animatedgradient 6s ease infinite alternate',
         "accordion-down": "accordion-down 0.2s ease-out",

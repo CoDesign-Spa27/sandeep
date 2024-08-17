@@ -38,7 +38,7 @@ export const AboutMe = () => {
   return (
     <div
       ref={ref}
-      className="w-full rounded-md dark:bg-black bg-[#ECE7E1] relative flex flex-col antialiased"
+      className="w-full h-screen rounded-md dark:bg-black bg-gray-300 relative flex flex-col antialiased"
     >
       <div className="max-w-7xl mx-auto p-10">
         <motion.div

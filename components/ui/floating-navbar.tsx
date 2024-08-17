@@ -22,7 +22,6 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
-
   const [visible, setVisible] = useState(true);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
@@ -32,11 +31,7 @@ export const FloatingNav = ({
       if (scrollYProgress.get() < 0.05) {
         setVisible(true);
       } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
+        setVisible(direction < 0);
       }
     }
   });
@@ -44,30 +39,24 @@ export const FloatingNav = ({
   return (
     <AnimatePresence mode="wait">
       <motion.div
-        initial={{
-          opacity: 1,
-          y: -100,
-        }}
-        animate={{
-          y: visible ? 0 : -100,
-          opacity: visible ? 1 : 0,
-        }}
-        transition={{
-          duration: 0.2,
-        }}
+        initial={{ opacity: 1, y: -100 }}
+        animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
+        transition={{ duration: 0.2 }}
         className={cn(
-          "flex max-w-fit fixed top-5 inset-x-0 mx-auto font-bold animate-gradient bg-300% bg-gradient-to-r from-violet-500 via-blue-500 to-pink-500 p-[4px] rounded-full z-[5000]", 
-          // Gradient border
+          "fixed z-[5000] inset-x-0 mx-auto font-bold p-1 rounded-full flex justify-center max-w-fit", 
+          "border-4 border-[#73c8a9]",    
+          // Responsive positioning: bottom for small screens, top for larger screens
+          "bottom-5 sm:top-5 sm:bottom-auto",
           className
         )}
       >
-        <div className="flex font-switzer pr-2 pl-8 py-2 items-center justify-center space-x-4 bg-[#ECE7E1] dark:bg-black rounded-full shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
-          {navItems.map((navItem: any, idx: number) => (
+        <div className="flex items-center justify-center space-x-4 bg-transparent/2 backdrop-blur-sm dark:bg-transparent/20   rounded-full  px-8 py-2">
+          {navItems.map((navItem, idx) => (
             <Link
               key={`link=${idx}`}
               href={navItem.link}
               className={cn(
-                "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+                "relative flex items-center space-x-1 text-neutral-600 dark:text-neutral-50 dark:hover:text-neutral-300 hover:text-neutral-500"
               )}
             >
               <span className="block sm:hidden">{navItem.icon}</span>

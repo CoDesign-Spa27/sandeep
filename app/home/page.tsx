@@ -11,6 +11,7 @@ import { ProjectSection } from "@/components/ProjectSection";
 import { AboutMe } from "@/components/AboutMe";
 import svg from "@/public/svg.svg"; // import your SVG
 import Image from "next/image";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 
 function Home() {
   const words = [
@@ -45,9 +46,9 @@ function Home() {
   return (
     <>
       <div className="relative h-[500vh] hidden sm:block w-full">
-        <HeroHighlight className="grid grid-cols-12">
+        <AuroraBackground className="grid grid-cols-12">
           <div className="col-span-12 flex flex-col gap-2 md:col-span-7 lg:col-span-8 pl-5 md:pl-10 relative z-10">
-            <div className="text-xl md:py-2 font-semibold font-switzer tracking-widest md:text-2xl">
+            <div className="text-xl md:py-4 font-semibold dark:text-white font-switzer tracking-widest md:text-2xl">
               Hi! I am
             </div>
             <motion.div
@@ -56,8 +57,8 @@ function Home() {
               transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
               className="font-bold bg-gradient-to-r from-[#73c8a9] via-purple-500 to-pink-400 text-transparent bg-clip-text bg-300% animate-gradient max-w-4xl leading-relaxed lg:leading-snug"
             >
-              <div className="md:text-5xl lg:text-7xl text-4xl sm:text-5xl font-switzer font-bold">
-                <Highlight className="text-black dark:text-white">
+              <div className="md:text-4xl lg:text-6xl text-4xl sm:text-4xl font-switzer font-bold">
+                <Highlight className="text-black p-4 dark:text-black">
                   Sandeep Singh
                 </Highlight>
                 .
@@ -79,10 +80,10 @@ function Home() {
               </div>
             </motion.div>
 
-            <div className="md:text-xl font-bold font-switzer">
+            <div className="md:text-xl dark:text-white font-bold font-switzer">
               I&apos;m a{" "}
               <FlipWords
-                className="font-bold font-switzer text-[#73C8A9]"
+                className="font-bold font-switzer dark:text-[#73c8a9] text-[#FEA1A1]"
                 words={words}
               />{" "}
             </div>
@@ -94,9 +95,9 @@ function Home() {
 
           {/* Animated SVG positioned on the right side */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }} // Start with opacity 0 and below the final position
-            animate={{ opacity: 1, y: 0 }} // Transition to opacity 1 and the final position
-            transition={{ duration: 2, ease: [0.4, 0.0, 0.2, 1] }} // Customize the animation timing
+            // initial={{ opacity: 0, y: 50 }} // Start with opacity 0 and below the final position
+            // animate={{ opacity: 1, y: 0 }} // Transition to opacity 1 and the final position
+            // transition={{ duration: 2, ease: [0.4, 0.0, 0.2, 1] }} // Customize the animation timing
             className="absolute right-0 top-10 h-full w-[60vw] pointer-events-none"
           >
             <Image
@@ -106,15 +107,15 @@ function Home() {
               priority={true}
             />
           </motion.div>
-        </HeroHighlight>
+        </AuroraBackground>
 
         <ProjectSection />
         <AboutMe />
       </div>
 
       <div className="sm:hidden block">
-        <HeroHighlight className="">
-          <div className="text-xl md:py-2 font-semibold font-switzer tracking-widest md:text-2xl">
+        <AuroraBackground className="">
+          <div className="text-xl md:py-2 font-semibold dark:text-white font-switzer tracking-widest md:text-2xl">
             Hi! I am
           </div>
           <div className="flex flex-col gap-5 items-center">
@@ -132,7 +133,7 @@ function Home() {
               </div>
             </motion.div>
 
-            <div className="text-center text-xl font-bold font-switzer">
+            <div className="text-center dark:text-white text-xl font-bold font-switzer">
               I&apos;m a{" "}
               <FlipWords
                 className="font-bold font-switzer text-[#73C8A9]"
@@ -144,7 +145,7 @@ function Home() {
               <AnimatedTooltip items={social} />
             </div>
           </div>
-        </HeroHighlight>
+        </AuroraBackground>
         <ProjectSection />
         <AboutMe />
       </div>

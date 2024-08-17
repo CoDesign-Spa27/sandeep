@@ -7,37 +7,53 @@ import { MoveUpRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 100 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.2, // Delay each card by 0.2 seconds
+      duration: 0.6,
+    },
+  }),
+};
+
 export function ProjectSection() {
   return (
-    <div className="py-20 dark:bg-black bg-[#ECE7E1]">
+    <div className="py-20 dark:bg-black bg-white">
       <h1
         className="text-center text-4xl lg:text-5xl font-switzer 
       md:py-5 bg-clip-text dark:text-transparent text-black dark:bg-gradient-to-b dark:from-gray-500 dark:to-gray-100
       font-extrabold"
       >
-        Recent <span className="bg-gradient-to-r from-[#73c8a9]  via-purple-500 to-pink-400 text-transparent bg-clip-text bg-300% animate-gradient">Projects</span>. Please
-        Checkout!
+        Recent{" "}
+        <span className="bg-gradient-to-r from-[#73c8a9] via-purple-500 to-pink-400 text-transparent bg-clip-text bg-300% animate-gradient">
+          Projects
+        </span>
+        . Please Checkout!
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-        {projects.map((item) => (
-          <Link href={item.link} key={item.id} target="_blank">
-          <div
-            className="lg:min-h-[32.5rem] h-[25rem]  flex items-center justify-center sm:w-96 w-[80vw]"
+        {projects.map((item, index) => (
+          <motion.div
             key={item.id}
+            custom={index}
+            initial="hidden"
+            whileInView="visible"
+            variants={cardVariants}
+            viewport={{ once: true, amount: 0.5 }} // Trigger animation when 30% of the card is in view
+            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
           >
+            <Link href={item.link} target="_blank">
               <PinContainer title={item.title} href={item.link}>
                 <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[29.5vh] mb-10">
                   <div
                     className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                     style={{ backgroundColor: "#13162D" }}
                   >
-                    <img src="/bg.png"  alt="bgimg" />
+                    <img src="/bg.png" alt="bgimg" />
                   </div>
-                  <img
-                    src={item.img}
-                    alt="cover"
-                    className=" rounded-xl"
-                  />
+                  <img src={item.img} alt="cover" className="rounded-xl" />
                 </div>
 
                 <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
@@ -64,7 +80,13 @@ export function ProjectSection() {
                           transform: `translateX(-${5 * index + 2}px)`,
                         }}
                       >
-                        <Image width={400} height={400} src={icon} alt="icon5" className="p-2" />
+                        <Image
+                          width={400}
+                          height={400}
+                          src={icon}
+                          alt="icon5"
+                          className="p-2"
+                        />
                       </div>
                     ))}
                   </div>
@@ -77,9 +99,8 @@ export function ProjectSection() {
                   </div>
                 </div>
               </PinContainer>
-          
-          </div>
-          </Link>
+            </Link>
+          </motion.div>
         ))}
       </div>
     </div>

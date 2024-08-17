@@ -30,7 +30,7 @@ export const HeroHighlight = ({
     <div
       className={cn(
         "relative h-screen flex items-center justify-center w-full group",
-        "bg-[#ECE7E1]",
+        "bg-[#F9FBE7]",
         "dark:bg-black dark:bg-none", 
         containerClassName
       )}
@@ -88,7 +88,7 @@ export const Highlight = ({
         display: "inline",
       }}
       className={cn(
-        `relative inline-block pb-1 bg-gradient-to-r  px-1 rounded-lg dark:bg-gradient-to-r from-[#d381ff] to-transparent dark:from-[#73C8A9] dark:to-transparent`,
+        `relative inline-block pb-1 bg-gradient-to-r px-1 rounded-lg dark:bg-gradient-to-r from-[#FEA1A1] to-transparent dark:from-[#73C8A9] dark:to-transparent`,
         className
       )}
     >
