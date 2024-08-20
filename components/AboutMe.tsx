@@ -4,6 +4,7 @@ import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { BackgroundBeams } from "./ui/background-beams";
+import { Headline } from "./ui/HeadLine";
 
 export const AboutMe = () => {
   // Set up animation control
@@ -38,30 +39,10 @@ export const AboutMe = () => {
   return (
     <div
       ref={ref}
-      className="w-full h-screen rounded-md dark:bg-black bg-gray-300 relative flex flex-col antialiased"
+      className="w-full rounded-md dark:bg-neutral-950 relative flex flex-col antialiased"
     >
       <div className="max-w-7xl mx-auto p-10">
-        <motion.div
-          className="text-3xl md:text-5xl lg:text-6xl font-bold font-switzer mb-4 dark:text-white"
-          initial="hidden"
-          animate={controls}
-          variants={popUpVariants} // Apply pop-up animation to the header
-        >
-          About Me
-          <motion.div
-            initial="hidden"
-            animate={controls}
-            variants={{
-              hidden: { width: 0 },
-              visible: { width: "100%" },
-            }}
-            transition={{
-              duration: 1,
-              ease: "easeInOut",
-            }}
-            className="h-[0.2rem] animate-gradient bg-300% bg-gradient-to-r from-violet-500 via-blue-500 to-pink-500 mt-2"
-          />
-        </motion.div>
+      <Headline title="About Me" />
         <motion.div
           className="font-switzer py-6 tracking-wide grid grid-cols-1 md:grid-cols-2 gap-8 text-white"
           initial="hidden"
@@ -102,7 +83,7 @@ export const AboutMe = () => {
           </div>
         </motion.div>
       </div>
-      <BackgroundBeams />
+      
     </div>
   );
 };

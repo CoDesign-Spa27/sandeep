@@ -44,30 +44,30 @@ export const FloatingNav = ({
         transition={{ duration: 0.2 }}
         className={cn(
           "fixed z-[5000] inset-x-0 mx-auto font-bold p-1 rounded-full flex justify-center max-w-fit", 
-          "border-4 border-[#73c8a9]",    
+          " animate-gradient bg-300% bg-gradient-to-r from-violet-500 via-blue-500 to-pink-500",   
           // Responsive positioning: bottom for small screens, top for larger screens
           "bottom-5 sm:top-5 sm:bottom-auto",
           className
         )}
       >
-        <div className="flex items-center justify-center space-x-4 bg-transparent/2 backdrop-blur-sm dark:bg-transparent/20   rounded-full  px-8 py-2">
+        <div className="flex items-center justify-center space-x-4 bg-neutral-950 dark:bg-black   rounded-full  px-8 py-2">
           {navItems.map((navItem, idx) => (
             <Link
               key={`link=${idx}`}
               href={navItem.link}
               className={cn(
-                "relative flex items-center space-x-1 text-neutral-600 dark:text-neutral-50 dark:hover:text-neutral-300 hover:text-neutral-500"
+                "relative flex items-center space-x-1 text-white dark:text-neutral-50 dark:hover:text-neutral-300 hover:text-neutral-500"
               )}
             >
               <span className="block sm:hidden">{navItem.icon}</span>
               <span className="hidden sm:block text-sm">{navItem.name}</span>
             </Link>
           ))}
-          <ModeToggle />
-          <button className="border font-bold font-switzer text-sm relative border-black dark:border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
+          <button className="border font-bold font-switzer text-sm relative border-neutral-200 dark:border-neutral-200 dark:border-white/[0.2] text-white dark:text-white px-4 py-2 rounded-full">
             <a href="mailto:dev.sandeepsingh28@gmail.com">Hire</a>
             <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
           </button>
+          <ModeToggle />
         </div>
       </motion.div>
     </AnimatePresence>

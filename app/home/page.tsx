@@ -12,6 +12,7 @@ import { AboutMe } from "@/components/AboutMe";
 import svg from "@/public/svg.svg"; // import your SVG
 import Image from "next/image";
 import { AuroraBackground } from "@/components/ui/aurora-background";
+import TechStack from "@/components/TechStack";
 
 function Home() {
   const words = [
@@ -58,7 +59,7 @@ function Home() {
               className="font-bold bg-gradient-to-r from-[#73c8a9] via-purple-500 to-pink-400 text-transparent bg-clip-text bg-300% animate-gradient max-w-4xl leading-relaxed lg:leading-snug"
             >
               <div className="md:text-4xl lg:text-6xl text-4xl sm:text-4xl font-switzer font-bold">
-                <Highlight className="text-black p-4 dark:text-black">
+                <Highlight className="text-black p-4 dark:text-white">
                   Sandeep Singh
                 </Highlight>
                 .
@@ -111,6 +112,8 @@ function Home() {
 
         <ProjectSection />
         <AboutMe />
+        <TechStack />
+
       </div>
 
       <div className="sm:hidden block">
@@ -148,6 +151,7 @@ function Home() {
         </AuroraBackground>
         <ProjectSection />
         <AboutMe />
+        <TechStack />
       </div>
     </>
   );

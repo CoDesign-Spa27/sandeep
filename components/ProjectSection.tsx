@@ -6,6 +6,7 @@ import { projects } from "@/data";
 import { MoveUpRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { Headline } from "./ui/HeadLine";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 100 },
@@ -21,18 +22,11 @@ const cardVariants = {
 
 export function ProjectSection() {
   return (
-    <div className="py-20 dark:bg-black bg-white">
-      <h1
-        className="text-center text-4xl lg:text-5xl font-switzer 
-      md:py-5 bg-clip-text dark:text-transparent text-black dark:bg-gradient-to-b dark:from-gray-500 dark:to-gray-100
-      font-extrabold"
-      >
-        Recent{" "}
-        <span className="bg-gradient-to-r from-[#73c8a9] via-purple-500 to-pink-400 text-transparent bg-clip-text bg-300% animate-gradient">
-          Projects
-        </span>
-        . Please Checkout!
-      </h1>
+    <div className="pt-20 px-10 dark:bg-neutral-950 bg-white">
+      <div className="max-w-7xl mx-auto">
+
+      <Headline title="Projects" />
+      </div>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {projects.map((item, index) => (
           <motion.div
