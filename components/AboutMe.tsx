@@ -39,7 +39,7 @@ export const AboutMe = () => {
   return (
     <div
       ref={ref}
-      className="w-full rounded-md dark:bg-neutral-950 relative flex flex-col antialiased"
+      className="w-full rounded-md dark:bg-[#18181B] relative flex flex-col antialiased"
     >
       <div className="max-w-7xl mx-auto p-10">
       <Headline title="About Me" />

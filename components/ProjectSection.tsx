@@ -22,7 +22,7 @@ const cardVariants = {
 
 export function ProjectSection() {
   return (
-    <div className="pt-20 px-10 dark:bg-neutral-950 bg-white">
+    <div className="pt-20 px-10 dark:bg-[#18181B] bg-white">
       <div className="max-w-7xl mx-auto">
 
       <Headline title="Projects" />

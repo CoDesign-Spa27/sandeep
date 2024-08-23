@@ -5,14 +5,14 @@ import { techStack } from '@/data';
 
 const TechStack = () => {
   return (
-    <div className='w-full   dark:bg-neutral-950 bg-white'>
+    <div className='w-full   dark:bg-[#18181B] bg-white'>
       <div className='max-w-7xl mx-auto p-10'>
         <Headline title='Tech Stack' />
         <div className='mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'>
           {techStack.map((item, index) => (
             <motion.div
               key={index}
-              className='relative p-[0.5px] rounded-lg animate-gradient bg-300% bg-gradient-to-r  from-violet-500 via-blue-500 to-pink-500 animate-gradient-border'
+              className='relative p-[0.5px] rounded-lg'
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -23,7 +23,7 @@ const TechStack = () => {
                 transition: { duration: 0.3 },
               }}
             >
-              <div className='p-5 rounded-lg bg-gray-100 dark:bg-neutral-900 flex flex-col items-center justify-center'>
+              <div className='p-5 rounded-lg bg-gray-100 dark:bg-neutral-800 flex flex-col items-center justify-center'>
                 <motion.img
                   src={item.img}
                   alt={`${item.name} Logo`}

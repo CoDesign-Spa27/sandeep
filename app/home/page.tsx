@@ -9,16 +9,16 @@ import { FlipWords } from "@/components/ui/flip-words";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { ProjectSection } from "@/components/ProjectSection";
 import { AboutMe } from "@/components/AboutMe";
-import svg from "@/public/svg.svg"; // import your SVG
-import Image from "next/image";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import TechStack from "@/components/TechStack";
+import Lottie from "lottie-react";
+import animationData from '@/public/Json/florid-software-developer.json';
 
 function Home() {
   const words = [
-    "Fullstack-Developer.",
-    "Proficient-Frontend.",
-    "Software-Developer.",
+    "Fullstack Developer.",
+    "Proficient Frontend.",
+    "Software Developer.",
   ];
 
   const social = [
@@ -46,105 +46,89 @@ function Home() {
 
   return (
     <>
-      <div className="relative h-[500vh] hidden sm:block w-full">
-        <AuroraBackground className="grid grid-cols-12">
-          <div className="col-span-12 flex flex-col gap-2 md:col-span-7 lg:col-span-8 pl-5 md:pl-10 relative z-10">
-            <div className="text-xl md:py-4 font-semibold dark:text-white font-switzer tracking-widest md:text-2xl">
-              Hi! I am
-            </div>
+      <div className="relative font-switzer hidden sm:block w-full">
+        <div className="min-h-screen grid grid-cols-12 dark:bg-[#18181B] px-5 md:px-10 lg:px-16">
+          <div className="col-span-12 md:col-span-7 lg:col-span-6 flex flex-col justify-center gap-4">
+          
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: [20, -5, 0] }}
               transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
-              className="font-bold bg-gradient-to-r from-[#73c8a9] via-purple-500 to-pink-400 text-transparent bg-clip-text bg-300% animate-gradient max-w-4xl leading-relaxed lg:leading-snug"
+              className="font-bold bg-gradient-to-r from-[#73c8a9] via-purple-500 to-pink-400 text-transparent bg-clip-text bg-300% animate-gradient leading-relaxed lg:leading-snug"
             >
-              <div className="md:text-4xl lg:text-6xl text-4xl sm:text-4xl font-switzer font-bold">
-                <Highlight className="text-black p-4 dark:text-white">
+              <div className="text-4xl md:text-5xl lg:text-6xl font-switzer font-bold">
+                <Highlight className="text-black dark:text-white">
                   Sandeep Singh
                 </Highlight>
                 .
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: [-30, 10, 0] }}
               transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
-              className="md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug md:mt-2 lg:mt-4"
+              className="text-xl md:text-4xl lg:text-5xl font-medium tracking-wider dark:text-gray-300"
             >
-              <div className="md:text-4xl lg:text-5xl text-xl sm:text-3xl font-switzer dark:text-gray-300 font-medium tracking-wider">
-                Bringing{" "}
-                <span className="bg-gradient-to-r from-[#73c8a9] via-purple-500 to-pink-400 text-transparent bg-clip-text bg-300% animate-gradient">
-                  Ideas to Life
-                </span>{" "}
-                with Full-Stack Development
-              </div>
+              Bringing{" "}
+              <span className="bg-gradient-to-r from-[#73c8a9] via-purple-500 to-pink-400 text-transparent bg-clip-text bg-300% animate-gradient">
+                Ideas to Life
+              </span>{" "}
+              with Full-Stack Development
             </motion.div>
-
-            <div className="md:text-xl dark:text-white font-bold font-switzer">
+            <div className="text-lg md:text-xl font-bold dark:text-white">
               I&apos;m a{" "}
               <FlipWords
-                className="font-bold font-switzer dark:text-[#73c8a9] text-[#FEA1A1]"
+                className="font-bold dark:text-[#73c8a9] text-[#FEA1A1]"
                 words={words}
-              />{" "}
+              />
             </div>
-
-            <div className="md:py-3 ">
+            <div className="py-3">
               <AnimatedTooltip items={social} />
             </div>
           </div>
 
-          {/* Animated SVG positioned on the right side */}
-          <motion.div
-            // initial={{ opacity: 0, y: 50 }} // Start with opacity 0 and below the final position
-            // animate={{ opacity: 1, y: 0 }} // Transition to opacity 1 and the final position
-            // transition={{ duration: 2, ease: [0.4, 0.0, 0.2, 1] }} // Customize the animation timing
-            className="absolute right-0 top-10 h-full w-[60vw] pointer-events-none"
-          >
-            <Image
-              src={svg}
-              alt="Decorative SVG"
-              className="object-cover h-full w-full mix-blend-multiply opacity-75"
-              priority={true}
+          <div className="hidden md:col-span-5 lg:col-span-6 md:flex justify-center md:justify-end items-center">
+            <Lottie 
+              animationData={animationData}
+              className="w-72 h-72 md:w-96 lg:w-[30rem] lg:h-[30rem] md:h-96 "
+              loop={true}
             />
-          </motion.div>
-        </AuroraBackground>
+          </div>
+        </div>
 
         <ProjectSection />
         <AboutMe />
         <TechStack />
-
       </div>
 
-      <div className="sm:hidden block">
-        <AuroraBackground className="">
-          <div className="text-xl md:py-2 font-semibold dark:text-white font-switzer tracking-widest md:text-2xl">
+      {/* Mobile Layout */}
+      <div className="sm:hidden block px-4 dark:bg-[#18181B]">
+        <AuroraBackground>
+          <div className="text-xl font-semibold dark:text-white tracking-widest py-2">
             Hi! I am
           </div>
-          <div className="flex flex-col gap-5 items-center">
+          <div className="flex flex-col gap-5 items-center text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: [20, -5, 0] }}
               transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
-              className="font-bold bg-gradient-to-r from-[#73c8a9] via-purple-500 to-pink-400 text-transparent bg-clip-text bg-300% animate-gradient max-w-4xl leading-relaxed lg:leading-snug"
+              className="font-bold bg-gradient-to-r from-[#73c8a9] via-purple-500 to-pink-400 text-transparent bg-clip-text bg-300% animate-gradient leading-relaxed lg:leading-snug"
             >
-              <div className="text-wrap text-[2.6rem] font-switzer font-bold">
-                <Highlight className="text-black text-[2.6rem] dark:text-white">
+              <div className="text-[2.6rem] font-switzer font-bold">
+                <Highlight className="text-black dark:text-white">
                   Sandeep
-                </Highlight>
+                </Highlight>{" "}
                 Singh.
               </div>
             </motion.div>
-
-            <div className="text-center dark:text-white text-xl font-bold font-switzer">
+            <div className="text-xl font-bold dark:text-white">
               I&apos;m a{" "}
               <FlipWords
-                className="font-bold font-switzer text-[#73C8A9]"
+                className="font-bold text-[#73C8A9]"
                 words={words}
-              />{" "}
+              />
             </div>
-
-            <div className="md:py-3 ">
+            <div className="py-3">
               <AnimatedTooltip items={social} />
             </div>
           </div>

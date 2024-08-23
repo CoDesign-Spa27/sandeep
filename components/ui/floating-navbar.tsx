@@ -50,7 +50,7 @@ export const FloatingNav = ({
           className
         )}
       >
-        <div className="flex items-center justify-center space-x-4 bg-neutral-950 dark:bg-black   rounded-full  px-8 py-2">
+        <div className="flex items-center justify-center space-x-4 bg-[#18181B] dark:bg-[#18181B]   rounded-full  px-8 py-2">
           {navItems.map((navItem, idx) => (
             <Link
               key={`link=${idx}`}
@@ -59,8 +59,8 @@ export const FloatingNav = ({
                 "relative flex items-center space-x-1 text-white dark:text-neutral-50 dark:hover:text-neutral-300 hover:text-neutral-500"
               )}
             >
-              <span className="block sm:hidden">{navItem.icon}</span>
-              <span className="hidden sm:block text-sm">{navItem.name}</span>
+              <span className="block text-white sm:hidden">{navItem.icon}</span>
+              <span className="hidden sm:block text-white text-sm">{navItem.name}</span>
             </Link>
           ))}
           <button className="border font-bold font-switzer text-sm relative border-neutral-200 dark:border-neutral-200 dark:border-white/[0.2] text-white dark:text-white px-4 py-2 rounded-full">
