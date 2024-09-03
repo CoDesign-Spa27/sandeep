@@ -7,12 +7,15 @@ import GMAIL from "@/public/gmail.svg";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { FlipWords } from "@/components/ui/flip-words";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
-import { ProjectSection } from "@/components/ProjectSection";
-import { AboutMe } from "@/components/AboutMe";
-import { AuroraBackground } from "@/components/ui/aurora-background";
-import TechStack from "@/components/TechStack";
 import Lottie from "lottie-react";
 import animationData from '@/public/Json/florid-software-developer.json';
+import dynamic from "next/dynamic";
+import RobotLogo from "@/public/Robot-Logo.png"
+import Image from "next/image";
+const ProjectSection = dynamic(() => import('@/components/ProjectSection') );
+const AuroraBackground = dynamic(() => import('@/components/ui/aurora-background'));
+const AboutMe = dynamic(() => import('@/components/AboutMe'));
+const TechStack = dynamic(() => import('@/components/TechStack'));
 
 function Home() {
   const words = [
@@ -26,21 +29,28 @@ function Home() {
       id: 1,
       name: "CoDesign-Spa27",
       image: GITHUB,
+      link:'https://github.com/CoDesign-Spa27/'
     },
     {
       id: 2,
       name: "sandeep_code28",
       image: X,
+      link:'https://x.com/sandeep_code28'
+
     },
     {
       id: 3,
       name: "Sandeep Singh",
       image: LINKEDIN,
+      link:'https://www.linkedin.com/in/sandeep-singh-43b6a921a/'
+
     },
     {
       id: 4,
       name: "dev.sandeepsingh28@gmail.com",
       image: GMAIL,
+      link:''
+
     },
   ];
 
@@ -84,6 +94,7 @@ function Home() {
             </div>
             <div className="py-3">
               <AnimatedTooltip items={social} />
+
             </div>
           </div>
 
@@ -92,6 +103,9 @@ function Home() {
               animationData={animationData}
               className="w-72 h-72 md:w-96 lg:w-[30rem] lg:h-[30rem] md:h-96 "
               loop={true}
+              rendererSettings={{
+                preserveAspectRatio: 'xMidYMid slice',
+            }}
             />
           </div>
         </div>
@@ -102,11 +116,20 @@ function Home() {
       </div>
 
       {/* Mobile Layout */}
-      <div className="sm:hidden block px-4 dark:bg-[#18181B]">
+      <div className="sm:hidden font-switzer w-full block dark:bg-[#18181B]">
         <AuroraBackground>
-          <div className="text-xl font-semibold dark:text-white tracking-widest py-2">
+          <div className="flex items-center justify-center">
+          <div>
+           
+           <Image src={RobotLogo} alt="logo" className="w-24 h-24 object-contain" />
+          
+         </div>
+         <div className="text-xl font-semibold dark:text-white tracking-widest py-2">
+         
             Hi! I am
           </div>
+          </div>
+          
           <div className="flex flex-col gap-5 items-center text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

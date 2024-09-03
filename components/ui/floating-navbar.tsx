@@ -9,6 +9,7 @@ import {
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { ModeToggle } from "../mode-toggle";
+import DownloadResumeButton from "../DownloadResumeButton";
 
 export const FloatingNav = ({
   navItems,
@@ -50,7 +51,7 @@ export const FloatingNav = ({
           className
         )}
       >
-        <div className="flex items-center justify-center space-x-4 bg-[#18181B] dark:bg-[#18181B]   rounded-full  px-8 py-2">
+        <div className="flex items-center justify-center space-x-2 bg-[#18181B] dark:bg-[#18181B]   rounded-full  px-8 py-2">
           {navItems.map((navItem, idx) => (
             <Link
               key={`link=${idx}`}
@@ -63,11 +64,12 @@ export const FloatingNav = ({
               <span className="hidden sm:block text-white text-sm">{navItem.name}</span>
             </Link>
           ))}
-          <button className="border font-bold font-switzer text-sm relative border-neutral-200 dark:border-neutral-200 dark:border-white/[0.2] text-white dark:text-white px-4 py-2 rounded-full">
+          <button className="border font-bold font-switzer text-[0.6rem] relative border-neutral-200 dark:border-neutral-200 dark:border-white/[0.2] text-white dark:text-white px-2 py-1 rounded-full">
             <a href="mailto:dev.sandeepsingh28@gmail.com">Hire</a>
             <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
           </button>
           <ModeToggle />
+          <DownloadResumeButton />
         </div>
       </motion.div>
     </AnimatePresence>

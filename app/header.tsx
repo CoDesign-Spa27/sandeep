@@ -5,6 +5,8 @@ import { ModeToggle } from "@/components/mode-toggle";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import RobotLogo from "@/public/Robot-Logo.png"
 import Image from "next/image";
+import DownloadResumeButton from "@/components/DownloadResumeButton";
+import Link from "next/link";
 export function Header() {
   const navItems = [
     {
@@ -41,22 +43,22 @@ export function Header() {
 
           {/* Center section (navigation links) */}
           <div className="hidden font-bold text-white sm:flex items-center space-x-8">
-            <a href="/" className="hover:text-[#73c8a9] transition">
+            <Link href="/home" className="hover:text-[#73c8a9] transition">
             &lt; Home / &gt;
-            </a>
-            <a href="#contact" className="hover:text-[#73c8a9] transition">
-            &lt; Contact / &gt;
+            </Link>
+            <Link href="about" className="hover:text-[#73c8a9] transition">
+            &lt; About / &gt;
             
-            </a>
+            </Link>
           </div>
 
           {/* Right section (actions like buttons and toggles) */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-10">
             <button className="relative border font-bold font-switzer text-sm border-neutral-200 dark:border-white/[0.2] text-white px-4 py-2 rounded-full hover:bg-[#73c8a9] transition">
               <a href="mailto:dev.sandeepsingh28@gmail.com">Hire Me</a>
               <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
             </button>
-
+<DownloadResumeButton />
             <ModeToggle /> {/* Theme toggle button */}
           </div>
         </div>

@@ -5,8 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { BackgroundBeams } from "./ui/background-beams";
 import { Headline } from "./ui/HeadLine";
-
-export const AboutMe = () => {
+ const AboutMe = () => {
   // Set up animation control
   const controls = useAnimation();
 
@@ -87,3 +86,6 @@ export const AboutMe = () => {
     </div>
   );
 };
+
+
+export default AboutMe

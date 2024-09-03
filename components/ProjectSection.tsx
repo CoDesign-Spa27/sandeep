@@ -20,7 +20,7 @@ const cardVariants = {
   }),
 };
 
-export function ProjectSection() {
+ function ProjectSection() {
   return (
     <div className="pt-20 px-10 dark:bg-[#18181B] bg-white">
       <div className="max-w-7xl mx-auto">
@@ -100,3 +100,5 @@ export function ProjectSection() {
     </div>
   );
 }
+
+export default ProjectSection;
