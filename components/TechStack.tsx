@@ -2,8 +2,7 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import { Headline } from './ui/HeadLine';
 import { techStack } from '@/data';
-
-const TechStack = () => {
+function TechStack () {
   return (
     <div className='w-full   dark:bg-[#18181B] bg-white'>
       <div className='max-w-7xl mx-auto p-10'>

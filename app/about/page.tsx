@@ -1,4 +1,6 @@
-import { AboutMe } from "@/components/AboutMe"
+import dynamic from 'next/dynamic';
+
+const AboutMe = dynamic(() => import('@/components/AboutMe'));
  
 
 const about= ()=>{

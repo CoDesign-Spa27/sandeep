@@ -1,23 +1,23 @@
-"use client";
+"use client"
 import { motion } from "framer-motion";
 import GITHUB from "@/public/github.svg";
 import X from "@/public/X.svg";
 import LINKEDIN from "@/public/linkedin.svg";
 import GMAIL from "@/public/gmail.svg";
-import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
+import {Highlight } from "@/components/ui/hero-highlight";
 import { FlipWords } from "@/components/ui/flip-words";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import Lottie from "lottie-react";
 import animationData from '@/public/Json/florid-software-developer.json';
-import dynamic from "next/dynamic";
 import RobotLogo from "@/public/Robot-Logo.png"
 import Image from "next/image";
-const ProjectSection = dynamic(() => import('@/components/ProjectSection') );
-const AuroraBackground = dynamic(() => import('@/components/ui/aurora-background'));
-const AboutMe = dynamic(() => import('@/components/AboutMe'));
-const TechStack = dynamic(() => import('@/components/TechStack'));
+import ProjectSection from "@/components/ProjectSection"; 
+import AuroraBackground from "@/components/ui/aurora-background";
+import AboutMe from "@/components/AboutMe";
+import TechStack from "@/components/TechStack";
 
-function Home() {
+
+ const home =()=> {
   const words = [
     "Fullstack Developer.",
     "Proficient Frontend.",
@@ -103,9 +103,6 @@ function Home() {
               animationData={animationData}
               className="w-72 h-72 md:w-96 lg:w-[30rem] lg:h-[30rem] md:h-96 "
               loop={true}
-              rendererSettings={{
-                preserveAspectRatio: 'xMidYMid slice',
-            }}
             />
           </div>
         </div>
@@ -164,4 +161,5 @@ function Home() {
   );
 }
 
-export default Home;
+ 
+export default home
