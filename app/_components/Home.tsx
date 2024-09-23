@@ -33,7 +33,7 @@ const Home = () => {
       id: 4,
       name: "dev.sandeepsingh28@gmail.com",
       image: GMAIL,
-      link: "",
+      link: "mailto:dev.sandeepsingh28@gmail.com",
     },
   ];
 
@@ -105,14 +105,14 @@ const Home = () => {
         <div>
      
           <motion.div
-            className="md:text-6xl text-4xl font-black"
+            className="md:text-6xl text-2xl sm:text-4xl font-black"
             variants={containerVariants}
           >
             Hi I am Sandeep Singh!
           </motion.div>
 
       
-          <motion.div className="py-2 font-mono" variants={textVariants}>
+          <motion.div className="py-2 sm:text-lg text-sm font-mono" variants={textVariants}>
             <Balancer>
               Full-Stack Developer | Passionate about building innovative web
               applications.
@@ -140,7 +140,7 @@ const Home = () => {
         </div>
  
         <motion.div className="rounded-full" variants={imageVariants}>
-          <Image className="md:w-48 rounded-full w-40" src={Profile} alt="logo" />
+          <Image className="md:w-48 rounded-full w-56" src={Profile} alt="logo" />
         </motion.div>
       </div>
     </motion.div>

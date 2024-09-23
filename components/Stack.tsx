@@ -28,7 +28,7 @@ function Stack () {
     className='text-xl font-black text-center'>
       Tech Stack
     </motion.div>
-        <div className='mt-5 grid grid-cols-4 md:grid-cols-4 lg:grid-cols-5 gap-8'>
+        <div className='mt-5 grid grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-8'>
           {techStack.map((item, index) => (
             <motion.div
               key={index}
@@ -43,15 +43,15 @@ function Stack () {
                 transition: { duration: 0.3 },
               }}
             >
-              <div className='dark:bg-slate-700 sm:p-3 p-1 rounded-lg bg-neutral-300 flex flex-col items-center justify-center'>
+              <div className='dark:bg-slate-700 sm:p-2 p-1 rounded-lg bg-neutral-300 flex flex-col items-center justify-center'>
                 <motion.img
                   src={item.img}
                   alt={`${item.name} Logo`}
-                  className='sm:w-12 w-10 h-10 sm:h-12 object-contain sm:mb-4'
+                  className='sm:w-10 w-10 h-10 sm:h-10 object-contain sm:mb-2'
                   whileHover={{ scale: 1.15, transition: { duration: 0.3 } }}
                 />
                 <motion.h3
-                  className='sm:block hidden capitalize font-semibold text-center text-gray-800 dark:text-white'
+                  className='sm:block text-sm hidden capitalize font-semibold text-center text-gray-800 dark:text-white'
                   whileHover={{ y: -5, transition: { duration: 0.3 } }}
                 >
                   {item.name}
