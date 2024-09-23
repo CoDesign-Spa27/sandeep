@@ -2,12 +2,33 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import { Headline } from './ui/HeadLine';
 import { techStack } from '@/data';
-function TechStack () {
+function Stack () {
+
+
+  const textVariants = {
+    hidden: { opacity: 0, y: 50 }, 
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 50,
+        damping: 20,
+        delay: 0.3,
+      },
+    },
+  };
   return (
-    <div className='w-full   dark:bg-[#18181B] bg-white'>
-      <div className='max-w-7xl mx-auto p-10'>
-        <Headline title='Tech Stack' />
-        <div className='mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'>
+    <div className='w-full'>
+      <div className='w-full mx-auto'>
+    <motion.div
+      variants={textVariants}
+      initial='hidden'
+      animate='visible'
+    className='text-xl font-black text-center'>
+      Tech Stack
+    </motion.div>
+        <div className='mt-5 grid grid-cols-4 md:grid-cols-4 lg:grid-cols-5 gap-8'>
           {techStack.map((item, index) => (
             <motion.div
               key={index}
@@ -22,15 +43,15 @@ function TechStack () {
                 transition: { duration: 0.3 },
               }}
             >
-              <div className='p-5 rounded-lg bg-gray-100 dark:bg-neutral-800 flex flex-col items-center justify-center'>
+              <div className='dark:bg-slate-700 sm:p-3 p-1 rounded-lg bg-neutral-300 flex flex-col items-center justify-center'>
                 <motion.img
                   src={item.img}
                   alt={`${item.name} Logo`}
-                  className='sm:w-20 w-10 h-10 sm:h-20 object-contain sm:mb-4'
+                  className='sm:w-12 w-10 h-10 sm:h-12 object-contain sm:mb-4'
                   whileHover={{ scale: 1.15, transition: { duration: 0.3 } }}
                 />
                 <motion.h3
-                  className='sm:block text-lg capitalize hidden font-semibold text-center text-gray-800 dark:text-white'
+                  className='sm:block hidden capitalize font-semibold text-center text-gray-800 dark:text-white'
                   whileHover={{ y: -5, transition: { duration: 0.3 } }}
                 >
                   {item.name}
@@ -44,4 +65,4 @@ function TechStack () {
   );
 };
 
-export default TechStack;
+export default Stack;

@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import localFont from "@next/font/local";
 import { Providers } from "./provider";
-import { Header } from "./header";
+import Anouncment from "@/components/Anouncment";
 
  
 
@@ -53,12 +53,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${switzer.variable} ${inter.variable}`}>
+    <html lang="en" className={`${switzer.variable} ${inter.variable} `}>
       <body className=" scroll-smooth" >
         <Providers>
-        
-
-          <Header />
+        <Anouncment  />
+ 
           {children}
          
         </Providers>

@@ -3,7 +3,6 @@
 import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { BackgroundBeams } from "./ui/background-beams";
 import { Headline } from "./ui/HeadLine";
 
 function AboutMe ()  {

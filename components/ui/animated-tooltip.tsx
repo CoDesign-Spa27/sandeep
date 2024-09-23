@@ -46,7 +46,7 @@ export const AnimatedTooltip = ({
   };
 
   return (
-    <div className="flex gap-1">
+    <div className="flex gap-4">
       <AnimatePresence>
         {items.map((item, idx) => (
           <motion.div
