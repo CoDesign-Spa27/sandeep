@@ -112,3 +112,22 @@ export const techStack = [
     img: "/Logos/icons8-firebase.svg",
   },
 ];
+
+export const EXPERIENCE_DATA = [
+  {
+    id:1,
+    title: "Software Developer",
+    company: "SuperBrain Ai",
+    description: "I worked as a Software Developer at SuperBrain Ai. I was responsible for developing and maintaining the company's website and mobile applications. Build UI components in NEXTJS and React Native. I also worked on the backend using Django and developed forget password flow of the application. Also optimized the applicartiob for enhancing performance.",
+    date: "March 2024 - August 2024",  
+    image:'/experience/SuperBrain Logo.svg'  
+  },
+  {
+    id:2,
+    title:"Developing Web Applications",
+    company:"Developing Experience of more than 2 years",
+    description:"I have been developing web applications for more than 2 years. I have experience in developing web applications using React, NextJs, and TailwindCSS. I have also worked on backend technologies like NodeJs, ExpressJs, and MongoDB. I have also worked on cloud technologies like Cloudflare Workers and Docker.",
+    date:"2022 - present",
+    image:'/experience/avatar.svg'
+  }
+]

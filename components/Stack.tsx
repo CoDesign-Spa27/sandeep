@@ -51,7 +51,7 @@ function Stack () {
                   whileHover={{ scale: 1.15, transition: { duration: 0.3 } }}
                 />
                 <motion.h3
-                  className='sm:block text-sm hidden capitalize font-semibold text-center text-gray-800 dark:text-white'
+                  className='sm:block text-sm hidden capitalize font-thin text-center text-gray-800 dark:text-white'
                   whileHover={{ y: -5, transition: { duration: 0.3 } }}
                 >
                   {item.name}

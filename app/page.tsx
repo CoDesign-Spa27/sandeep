@@ -3,7 +3,7 @@ import Home from "./_components/Home";
 import TechStack from "./_components/TechStack";
 import Navbar from "./_components/Navbar";
 import { useRef } from "react";
-import Anouncment from "@/components/Anouncment";
+import Experience from "./_components/Experience";
 
 export default function Landing() {
   const homeRef = useRef(null);
@@ -24,9 +24,12 @@ export default function Landing() {
         <section ref={homeRef}>
           <Home />
         </section>
-        <div>
+        <section>
           <TechStack />
-        </div>
+        </section>
+        <section ref={experienceRef}>
+          <Experience  />
+        </section>
       </div>
     </div>
   );
