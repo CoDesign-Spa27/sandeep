@@ -118,7 +118,7 @@ export const EXPERIENCE_DATA = [
     id:1,
     title: "Software Developer",
     company: "SuperBrain Ai",
-    description: "I worked as a Software Developer at SuperBrain Ai. I was responsible for developing and maintaining the company's website and mobile applications. Build UI components in NEXTJS and React Native. I also worked on the backend using Django and developed forget password flow of the application. Also optimized the applicartiob for enhancing performance.",
+    description: "I worked as a Software Developer at SuperBrain Ai. I was responsible for developing and maintaining the company's website and mobile applications. Build UI components in NEXTJS and React Native. I also worked on the backend using Django and developed forget password flow of the application. Also optimized the application for enhancing performance.",
     date: "March 2024 - August 2024",  
     image:'/experience/SuperBrain Logo.svg'  
   },
@@ -129,5 +129,27 @@ export const EXPERIENCE_DATA = [
     description:"I have been developing web applications for more than 2 years. I have experience in developing web applications using React, NextJs, and TailwindCSS. I have also worked on backend technologies like NodeJs, ExpressJs, and MongoDB. I have also worked on cloud technologies like Cloudflare Workers and Docker.",
     date:"2022 - present",
     image:'/experience/avatar.svg'
+  }
+]
+
+
+export const PROJECTS_DATA = [
+  {
+    id: 1,
+    name: "GrindCode",
+    video: "https://res.cloudinary.com/dvancfols/video/upload/v1727342449/projects/hfbc8dws7eikzfpqum3b.mp4",
+    description: "GrindCode is a place for Developers and coders to grind together.Meet random coders around the world in just one click.",
+technologies: ["NextJs", "TailwindCSS", "Typescript", "Stream","PostgreSQL", "Dribble", "Docker","Framer-motion","Zod","Shadcn"],
+    liveLink: "https://grind-code.vercel.app/",
+    codeLink:"https://github.com/CoDesign-Spa27/GrindCode"
+  },
+  {
+    id:2,
+    name:"ShareKro",
+    video:"https://res.cloudinary.com/dvancfols/video/upload/v1727373590/projects/gfpowryvbyf5sivaqjup.mp4",
+    description:"ShareKro is a platform where you can explore, share, and download images and more. With Masonry layout, you can explore images in a beautiful way.",
+    technologies:["ReactJs","TailwindCSS","Sanity","Javascript"],
+    liveLink:"https://sharekro.netlify.app/",
+    codeLink:"https://github.com/CoDesign-Spa27/share_kro"
   }
 ]

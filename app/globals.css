@@ -112,3 +112,7 @@ html {
 ::-webkit-scrollbar-corner {
   background: #1e1e1e; /* For the corner of the scrollbar */
 }
+
+html{
+  scroll-behavior: smooth;
+}

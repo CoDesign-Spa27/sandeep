@@ -1,9 +1,10 @@
 "use client";
-import Home from "./_components/Home";
-import TechStack from "./_components/TechStack";
-import Navbar from "./_components/Navbar";
+import Home from "./_Section/Home";
+import TechStack from "./_Section/TechStack";
+import Navbar from "./_Section/Navbar";
 import { useRef } from "react";
-import Experience from "./_components/Experience";
+import Experience from "./_Section/Experience";
+import Projects from "./_Section/Projects";
 
 export default function Landing() {
   const homeRef = useRef(null);
@@ -29,6 +30,10 @@ export default function Landing() {
         </section>
         <section ref={experienceRef}>
           <Experience  />
+        </section>
+
+        <section ref={projectsRef}>
+          <Projects />
         </section>
       </div>
     </div>

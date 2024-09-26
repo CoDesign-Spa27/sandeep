@@ -3,6 +3,7 @@ import React from "react";
 import SuperbrainLogo from "../../public/experience/SuperBrain Logo.svg";
 import Image from "next/image";
 import { ArrowBigDown, ChevronDown, ChevronRight } from "lucide-react";
+import Balancer from "react-wrap-balancer";
 
 
 interface ExperienceCardProps { 
@@ -37,11 +38,14 @@ const ExperienceCard = ({
     <div className="my-2">
 
       <div className="bg-white/10 py-2 px-4 rounded-xl backdrop-blur-sm">
-        <div className=" flex justify-between items-center">
+        <div className=" sm:flex justify-between items-center">
           <div>
-            <div className="text-lg items-center flex gap-2 py-1 font-bold">
+            <div className="sm:text-lg items-center flex sm:gap-2 gap-0.5 py-1 font-bold">
                 <div>
+                  <Balancer>
+
            {title}
+                  </Balancer>
                 </div>
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
@@ -58,7 +62,7 @@ const ExperienceCard = ({
                 <a
                   href="#"
                   onClick={handleExpand}
-                  className="text-sm text-gray-300 cursor-pointer"
+                  className="text-sm dark:text-gray-300 cursor-pointer"
                 >
                   <motion.div
                     animate={{
@@ -79,12 +83,12 @@ const ExperienceCard = ({
               <div className="bg-black rounded-full p-1">
                 <Image src={image} width={10} height={10} className="w-7 h-7" alt="logo" />
               </div>
-              <div className="text-sm">{company}</div>
+              <div className="text-sm py-2">{company}</div>
             </div>
           </div>
 
           <div className="flex flex-col items-center justify-between">
-            <div className="text-sm text-gray-300">
+            <div className="text-sm py-2 sm:py-0 dark:text-gray-300">
             {date}
             </div>
           </div>
@@ -103,7 +107,7 @@ const ExperienceCard = ({
             }}
             className="py-2"
           >
-            <motion.div className="text-sm text-gray-300">
+            <motion.div className="text-sm dark:text-gray-300 ">
               {description.split("").map((letter, index) => (
                 <motion.span
                   key={index}
