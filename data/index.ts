@@ -110,6 +110,10 @@ export const techStack = [
     id: 17,
     name: "Firebase",
     img: "/Logos/icons8-firebase.svg",
+  }, {
+    id: 18,
+    name: "Framer Motion",
+    img: "/Logos/framer-motion.svg",
   },
 ];
 

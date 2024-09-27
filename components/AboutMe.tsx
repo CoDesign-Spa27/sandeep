@@ -3,7 +3,7 @@
 import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Headline } from "./ui/HeadLine";
+
 
 function AboutMe ()  {
   // Set up animation control
@@ -41,7 +41,7 @@ function AboutMe ()  {
       className="w-full rounded-md dark:bg-[#18181B] relative flex flex-col antialiased"
     >
       <div className="max-w-7xl mx-auto p-10">
-      <Headline title="About Me" />
+     
         <motion.div
           className="font-switzer py-6 tracking-wide grid grid-cols-1 md:grid-cols-2 gap-8 text-white"
           initial="hidden"

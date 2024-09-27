@@ -1,10 +1,11 @@
 "use client";
-import Home from "./_Section/Home";
-import TechStack from "./_Section/TechStack";
+import { useRef, Suspense } from "react";
 import Navbar from "./_Section/Navbar";
-import { useRef } from "react";
-import Experience from "./_Section/Experience";
-import Projects from "./_Section/Projects";
+import React from "react";
+const Home = React.lazy(() => import("./_Section/Home"));
+const TechStack = React.lazy(() => import("./_Section/TechStack"));
+const Experience = React.lazy(() => import("./_Section/Experience"));
+const Projects = React.lazy(() => import("./_Section/Projects"));
 
 export default function Landing() {
   const homeRef = useRef(null);
@@ -13,7 +14,6 @@ export default function Landing() {
 
   return (
     <div className="min-h-screen bg-background antialiased max-w-5xl mx-auto py-10 sm:py-12 px-6 transition-all bg-[#001100] font-switzer">
-   
       <div className="flex flex-col gap-10">
         <div>
           <Navbar
@@ -23,17 +23,24 @@ export default function Landing() {
           />
         </div>
         <section ref={homeRef}>
-          <Home />
+          <Suspense fallback={<div></div>}>
+            <Home />
+          </Suspense>
         </section>
         <section>
-          <TechStack />
+          <Suspense fallback={<div></div>}>
+            <TechStack />
+          </Suspense>
         </section>
         <section ref={experienceRef}>
-          <Experience  />
+          <Suspense fallback={<div></div>}>
+            <Experience />
+          </Suspense>
         </section>
-
         <section ref={projectsRef}>
-          <Projects />
+          <Suspense fallback={<div></div>}>
+            <Projects />
+          </Suspense>
         </section>
       </div>
     </div>

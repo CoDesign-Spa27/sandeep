@@ -42,7 +42,7 @@ const Projects = () => {
     },
   };
   return (
-    <div className="py-5">
+    <div className="">
       <motion.div
         ref={ref}
         variants={containerVariants}

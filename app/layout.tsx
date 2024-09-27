@@ -54,10 +54,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${switzer.variable} ${inter.variable} `}>
-      <body className=" scroll-smooth" >
+      <body className=" =scroll-smooth" >
         <Providers>
-        {/* <Anouncment  /> */}
- 
+          {/* <Anouncment /> */}
           {children}
          
         </Providers>

@@ -45,7 +45,7 @@ const Experience = () => {
   };
 
   return (
-    <div className="py-10">
+    <div className="py-5">
  
       <motion.div
         ref={ref}

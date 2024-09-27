@@ -119,14 +119,14 @@ const Home = () => {
             </Balancer>
             <div className="my-2 gap-5 flex">
               <motion.span
-                className="bg-gray-400 cursor-pointer text-neutral-900 p-1"
-                variants={textVariants}
+              onClick={() => window.open("https://grind-code.vercel.app/", "_blank")}
+                className="bg-gray-400 cursor-pointer hover:bg-neutral-800 hover:text-white transition-all duration-300 text-neutral-900 p-1"
               >
                 GrindCode
               </motion.span>
+              
               <motion.span
-                className="bg-gray-400 cursor-pointer text-neutral-900 p-1"
-                variants={textVariants}
+                className="bg-gray-400 cursor-pointer  hover:bg-neutral-800 hover:text-white transition-all duration-300 text-neutral-900 p-1" 
               >
                 Rubber
               </motion.span>

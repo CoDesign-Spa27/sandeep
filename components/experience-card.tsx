@@ -37,7 +37,7 @@ const ExperienceCard = ({
   return (
     <div className="my-2">
 
-      <div className="bg-white/10 py-2 px-4 rounded-xl backdrop-blur-sm">
+      <div className="bg-black/10 dark:bg-white/10 py-2 px-4 rounded-xl backdrop-blur-sm">
         <div className=" sm:flex justify-between items-center">
           <div>
             <div className="sm:text-lg items-center flex sm:gap-2 gap-0.5 py-1 font-bold">
