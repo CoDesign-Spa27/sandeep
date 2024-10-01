@@ -4,6 +4,7 @@ import "./globals.css";
 import localFont from "@next/font/local";
 import { Providers } from "./provider";
 import Anouncment from "@/components/Anouncment";
+import { Toaster } from "@/components/ui/toaster";
 
  
 
@@ -56,9 +57,9 @@ export default function RootLayout({
     <html lang="en" className={`${switzer.variable} ${inter.variable} `}>
       <body className=" =scroll-smooth" >
         <Providers>
-          {/* <Anouncment /> */}
+          <Anouncment />
           {children}
-         
+          <Toaster />
         </Providers>
       </body>
     </html>

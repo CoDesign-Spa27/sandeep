@@ -59,7 +59,6 @@ const ProjectCard = ({
   loop
   muted
   playsInline
-  preload="metadata"
   className="pointer-events-none mx-auto h-36 w-full object-cover rounded-xl object-top"
 />
           </motion.div>

@@ -2,6 +2,7 @@
 import { useRef, Suspense } from "react";
 import Navbar from "./_Section/Navbar";
 import React from "react";
+import ContactMe from "./_Section/ContactMe";
 const Home = React.lazy(() => import("./_Section/Home"));
 const TechStack = React.lazy(() => import("./_Section/TechStack"));
 const Experience = React.lazy(() => import("./_Section/Experience"));
@@ -41,6 +42,10 @@ export default function Landing() {
           <Suspense fallback={<div></div>}>
             <Projects />
           </Suspense>
+        </section>
+
+        <section  >
+          <ContactMe />
         </section>
       </div>
     </div>
