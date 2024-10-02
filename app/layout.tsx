@@ -5,7 +5,7 @@ import localFont from "@next/font/local";
 import { Providers } from "./provider";
 import Anouncment from "@/components/Anouncment";
 import { Toaster } from "@/components/ui/toaster";
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
  
 
 const inter = Inter({
@@ -60,6 +60,7 @@ export default function RootLayout({
           <Anouncment />
           {children}
           <Toaster />
+          <SpeedInsights />
         </Providers>
       </body>
     </html>
