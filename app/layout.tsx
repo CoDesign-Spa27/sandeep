@@ -57,6 +57,7 @@ export default function RootLayout({
     <html lang="en" className={`${switzer.variable} ${inter.variable} `}>
       <body className=" =scroll-smooth" >
         <Providers>
+    
           <Anouncment />
           {children}
           <Toaster />
