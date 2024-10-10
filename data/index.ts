@@ -157,3 +157,23 @@ technologies: ["NextJs", "TailwindCSS", "Typescript", "Stream","PostgreSQL", "Dr
     codeLink:"https://github.com/CoDesign-Spa27/share_kro"
   }
 ]
+
+
+
+
+export const BLOG_DATA=[
+  {
+    id:1,
+    title:"Continuous Integration and Continuous Delivery/Deployment (CI/CD): A Beginner’s Guide",
+    description:"Continuous Integration and Continuous Delivery (or Deployment), commonly referred to as CI/CD, is a practice that allows development teams to automate the software release process.",
+    img:"https://res.cloudinary.com/dvancfols/image/upload/v1728548141/Blog2_qafahj.jpg",
+    link:"https://iamsandeep28.medium.com/continuous-integration-and-continuous-delivery-deployment-ci-cd-a-beginners-guide-b9950f586c06"
+  },
+  {
+    id:2,
+    title:"Mistakes you should avoid as a learning developer! (Beginner)",
+    description:"In this guide, we discussed some of the mistakes developers make in their coding journeys. These mistakes won’t make or break your learning, but fixing them as early as possible will help you grow a lot faster.",
+    img:"https://res.cloudinary.com/dvancfols/image/upload/v1728548087/austin-henckel-roTW-L2K8nQ-unsplash_krfp0d.jpg",
+    link:"https://iamsandeep28.medium.com/mistakes-you-should-avoid-as-a-learning-developer-beginner-4e5f255429af"
+  }
+]

@@ -7,9 +7,17 @@ import GITHUB from "@/public/github.svg";
 import X from "@/public/X.svg";
 import LINKEDIN from "@/public/linkedin.svg";
 import GMAIL from "@/public/gmail.svg";
+import MEDIUM from "@/public/medium.svg";
+import MEDIUMDARK from "@/public/medium-dark.svg";
+
 import { motion } from "framer-motion";  
+import { useTheme } from "next-themes";
+import Link from "next/link";
 
 const Home = () => {
+  const { theme } = useTheme();
+
+  
   const social = [
     {
       id: 1,
@@ -34,6 +42,12 @@ const Home = () => {
       name: "dev.sandeepsingh28@gmail.com",
       image: GMAIL,
       link: "mailto:dev.sandeepsingh28@gmail.com",
+    },
+    {
+      id: 5,
+      name: "medium",
+      image: theme === "dark" ? MEDIUMDARK : MEDIUM,
+      link: "https://medium.com/@iamsandeep28",
     },
   ];
 
@@ -108,7 +122,7 @@ const Home = () => {
             className="md:text-6xl text-2xl sm:text-4xl font-black"
             variants={containerVariants}
           >
-            Hi I am Sandeep Singh!
+            Hi! I am Sandeep Singh.
           </motion.div>
 
       
@@ -117,7 +131,7 @@ const Home = () => {
               Full-Stack Developer | Passionate about building innovative web
               applications.
             </Balancer>
-            <div className="my-2 gap-5 flex">
+            <div className="my-2 gap-5 flex items-center">
               <motion.span
               onClick={() => window.open("https://grind-code.vercel.app/", "_blank")}
                 className="bg-gray-400 cursor-pointer hover:bg-neutral-800 hover:text-white transition-all duration-300 text-neutral-900 p-1"
@@ -130,10 +144,16 @@ const Home = () => {
               >
                 Rubber
               </motion.span>
+<Link href={"/blogs"}>
+              <motion.span
+                className="bg-green-400 cursor-pointer  hover:bg-neutral-800 hover:text-white transition-all duration-300 text-neutral-900 px-2 py-1" 
+                >
+                Blogs
+              </motion.span>
+                </Link>
             </div>
           </motion.div>
-
-     
+       
           <motion.div variants={socialVariants}>
             <AnimatedTooltip items={social} />
           </motion.div>
