@@ -149,6 +149,15 @@ technologies: ["NextJs", "TailwindCSS", "Typescript", "Stream","PostgreSQL", "Dr
   },
   {
     id:2,
+    name:"Rubber",
+    video:"https://res.cloudinary.com/dvancfols/video/upload/v1728735312/Untitled_video_-_Made_with_Clipchamp_54_twlt0f.mp4",
+    description:"Rubber is a tool that empowers developers to create documentation and diagrams quickly using a minimal UI, keyboard-driven workflows, markdown, and diagram-as-code.",
+    technologies:["NextJs","Typescript","Convex","TailwindCSS"],
+    liveLink:"https://rubber-tau.vercel.app/",
+    codeLink:"https://github.com/CoDesign-Spa27/Rubber"
+  },
+  {
+    id:3,
     name:"ShareKro",
     video:"https://res.cloudinary.com/dvancfols/video/upload/v1727373590/projects/gfpowryvbyf5sivaqjup.mp4",
     description:"ShareKro is a platform where you can explore, share, and download images and more. With Masonry layout, you can explore images in a beautiful way.",

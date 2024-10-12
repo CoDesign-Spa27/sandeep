@@ -51,7 +51,7 @@ function DownloadResumeButton() {
     <AlertDialogFooter>
       <AlertDialogCancel>Cancel</AlertDialogCancel>
 
-      <Link href={"https://drive.google.com/file/d/1Wq1cd9y1XEIxS66rEPLeF2agg1Y0Piqm/view?usp=sharing"}
+      <Link href={"https://drive.google.com/drive/folders/17D1WsC_UAmGG_0twpxjjeQ80Dxfwn-vO?usp=sharing"}
       
       target='_blank'>
       <AlertDialogAction>Get Resume</AlertDialogAction>
