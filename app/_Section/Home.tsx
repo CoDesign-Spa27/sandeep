@@ -142,7 +142,7 @@ const Home = () => {
               <motion.span
                 className="bg-gray-400 cursor-pointer  hover:bg-neutral-800 hover:text-white transition-all duration-300 text-neutral-900 p-1" 
               >
-                Rubber
+                QuickShiksha
               </motion.span>
 <Link href={"/blogs"}>
               <motion.span

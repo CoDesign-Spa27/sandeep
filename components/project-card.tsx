@@ -29,7 +29,7 @@ const ProjectCard = ({
   return (
     <div className="flex flex-col items-center">
       <motion.div
-        className="bg-black/10 dark:bg-white/10 sm:w-96 w-80 h-[28rem] sm:h-[31rem] rounded-xl sm:p-5 p-2 backdrop-blur-sm border border-transparent transition-all duration-300 ease-in-out shadow-lg"
+        className="bg-black/10 dark:bg-white/10 sm:w-96 w-80 h-[28rem] sm:h-[31rem] rounded-xl sm:p-5 p-2 backdrop-blur-sm  border border-transparent transition-all duration-300 ease-in-out shadow-lg"
         whileHover={{
           scale: 1.05,
           boxShadow: "0px 15px 30px rgba(0, 0, 0, 0.2)",
