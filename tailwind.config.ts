@@ -2,18 +2,18 @@ const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
 
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 const svgToDataUri = require("mini-svg-data-uri");
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-    './data/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+    "./data/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -65,6 +65,16 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        glow: {
+          "0%, 100%": {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+          "50%": {
+            opacity: "0.7",
+            transform: "scale(1.05)",
+          },
+        },
         aurora: {
           from: {
             backgroundPosition: "50% 50%, 50% 50%",
@@ -73,14 +83,14 @@ const config = {
             backgroundPosition: "350% 50%, 350% 50%",
           },
         },
-        'gradient-x': {
-          '0%, 100%': { 'background-position': '0% 50%' },
-          '50%': { 'background-position': '100% 50%' },
+        "gradient-x": {
+          "0%, 100%": { "background-position": "0% 50%" },
+          "50%": { "background-position": "100% 50%" },
         },
         animatedgradient: {
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
         },
         "accordion-down": {
           from: { height: "0" },
@@ -102,31 +112,30 @@ const config = {
         },
       },
       backgroundSize: {
-        '300%': '300%',
-        '200%': '200% 200%',
+        "300%": "300%",
+        "200%": "200% 200%",
       },
       animation: {
         aurora: "aurora 60s linear infinite",
-        'gradient-x': 'gradient-x 5s ease infinite',
-        gradient: 'animatedgradient 6s ease infinite alternate',
+        "gradient-x": "gradient-x 5s ease infinite",
+        gradient: "animatedgradient 6s ease infinite alternate",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         spotlight: "spotlight 2s ease .75s 1 forwards",
       },
-      fontFamily:{
-        switzer:[`var(--font-switzer)`],
-        inter: ['var(--font-inter)'],
-
-      }
+      fontFamily: {
+        switzer: [`var(--font-switzer)`],
+        inter: ["var(--font-inter)"],
+      },
     },
   },
   plugins: [
-    require("tailwindcss-animate") ,
+    require("tailwindcss-animate"),
     addVariablesForColors,
-    function ({ matchUtilities, theme }: any) {
+    function ({ matchUtilities, theme }: { matchUtilities: any; theme: any }) {
       matchUtilities(
         {
-          "bg-dot-thick": (value: any) => ({
+          "bg-dot-thick": (value: string) => ({
             backgroundImage: `url("${svgToDataUri(
               `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="2.5"></circle></svg>`
             )}")`,
@@ -134,20 +143,24 @@ const config = {
         },
         { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
       );
-    }, 
-
+    },
   ],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
 
-
-function addVariablesForColors({ addBase, theme }: any) {
+function addVariablesForColors({
+  addBase,
+  theme,
+}: {
+  addBase: (base: Record<string, any>) => void;
+  theme: (path: string) => Record<string, string>;
+}) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });

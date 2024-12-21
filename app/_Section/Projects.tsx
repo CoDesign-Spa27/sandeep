@@ -52,14 +52,13 @@ const Projects = () => {
       >
         Projects
       </motion.div>
-      <motion.div className="flex flex-col md:flex-row flex-wrap gap-4 justify-center "
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center "
         variants={containerVariants}
       >
         {PROJECTS_DATA.map((project) => (
           <motion.div className="" key={project.id} variants={cardVariants}>
         <ProjectCard
           name={project.name}
-          video={project.video}
           description={project.description}
           technologies={project.technologies}
           liveLink={project.liveLink}

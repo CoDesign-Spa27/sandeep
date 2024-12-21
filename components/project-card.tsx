@@ -1,11 +1,8 @@
-import { motion } from "framer-motion";
-import { Code, SquareArrowOutUpRight } from "lucide-react";
 import React from "react";
-import Balancer from "react-wrap-balancer";
+import { motion } from "framer-motion";
 
 interface ProjectCardProps {
   name: string;
-  video: string;
   description: string;
   technologies: string[];
   liveLink: string;
@@ -14,123 +11,75 @@ interface ProjectCardProps {
 
 const ProjectCard = ({
   name,
-  video,
   description,
   technologies,
   liveLink,
   codeLink,
 }: ProjectCardProps) => {
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.2 } },
-  };
-
   return (
-    <div className="flex flex-col items-center">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      
+      className="w-full max-w-md mx-auto"
+    >
       <motion.div
-        className="bg-black/10 dark:bg-white/10 sm:w-96 w-80 h-[28rem] sm:h-[31rem] rounded-xl sm:p-5 p-2 backdrop-blur-sm  border border-transparent transition-all duration-300 ease-in-out shadow-lg"
-        whileHover={{
-          scale: 1.05,
-          boxShadow: "0px 15px 30px rgba(0, 0, 0, 0.2)",
-          borderColor: "#8b5cf6",
-        }}
-        whileTap={{ scale: 0.98 }}
+        whileHover={{ y: -2 , scale:1.05 }}
+        transition={{ duration: 0.3 }}
+        
+        className="h-[400px] flex flex-col bg-gradient-to-br dark:from-slate-800/50 to-slate-900/50 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 shadow-xl hover:border-cyan-400 transition-all duration-300 ease-in-out"
       >
-        <div className="flex flex-col gap-3 justify-center">
-          <div>
-            <motion.h1
-              className="text-center sm:text-xl font-bold text-white"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.2 }}
+        <div className="mb-6">
+          <h2 className="text-xl font-bold bg-gradient-to-r from-pink-400 to-violet-400 bg-clip-text text-transparent">
+            {name}
+          </h2>
+        </div>
+
+        {/* Technologies */}
+        <div className="flex flex-wrap gap-2 mb-4">
+          {technologies.map((tech: string, index: number) => (
+            <motion.span
+              key={tech}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: index * 0.1 }}
+              className="px-3 py-1 text-xs font-medium dark:text-slate-300 dark:bg-slate-800/50 rounded-full border border-slate-700/50"
             >
-              {name}
-            </motion.h1>
-          </div>
-          <motion.div
-            className="rounded-xl overflow-hidden"
-            initial={{ opacity: 0.9, scale: 1 }}
-            whileHover={{ opacity: 1, scale: 1.1 }}
+              {tech}
+            </motion.span>
+          ))}
+        </div>
+
+        {/* Description */}
+        <p className="text-sm dark:text-slate-300 mb-6 leading-relaxed flex-grow overflow-y-auto">
+          {description}
+        </p>
+
+        {/* Actions */}
+        <div className="flex gap-4 mt-auto">
+          <motion.a
+            href={liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex-1 flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-violet-500 rounded-lg hover:opacity-90 transition-opacity"
           >
-        <video
-  src={video}
-  autoPlay
-  loop
-  muted
-  playsInline
-  className="pointer-events-none mx-auto h-36 w-full object-cover rounded-xl object-top"
-/>
-          </motion.div>
-
-          <div>
-            {technologies.map((name, index) => (
-              <motion.div
-                key={index}
-                className="bg-slate-100 rounded-full px-2 py-1 inline-block font-semibold text-[11px] sm:text-[14px] text-black m-1"
-                variants={itemVariants}
-                initial="hidden"
-                animate="visible"
-                transition={{ delay: 0.1 * index }}
-              >
-                {name}
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="text-gray-400 sm:text-base text-sm">
-            <Balancer>
-             {description}
-            </Balancer>
-          </div>
-
-          <div className="sm:flex hidden gap-4">
-            <motion.button
-            onClick={() => window.open(liveLink, "_blank")}
-              className="flex overflow-hidden ring-white w-[4.9rem] hover:w-[6.5rem] items-center gap-2 cursor-pointer bg-gradient-to-r from-violet-600 to-indigo-500 text-white px-5 py-1 rounded-full transition-all ease-in-out hover:scale-105 font-[revert] active:scale-100 shadow-lg"
-              whileHover={{
-                scale: 1.05,
-                backgroundColor: "#7c3aed",
-                boxShadow: "0px 5px 15px rgba(124, 58, 237, 0.4)",
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Live
-              <SquareArrowOutUpRight className="h-4" />
-            </motion.button>
-
-            <motion.button
-            onClick={() => window.open(codeLink, "_blank")}
-              className="flex overflow-hidden ring-white w-[4.9rem] hover:w-[6.5rem] items-center gap-2 cursor-pointer bg-gradient-to-r from-violet-600 to-indigo-500 text-white px-5 py-1 rounded-full transition-all ease-in-out hover:scale-105 font-[revert] active:scale-100 shadow-lg"
-              whileHover={{
-                scale: 1.05,
-                backgroundColor: "#7c3aed",
-                boxShadow: "0px 5px 15px rgba(124, 58, 237, 0.4)",
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Code
-              <SquareArrowOutUpRight className="h-4" />
-            </motion.button>
-          </div>
-
-          <div className="flex sm:hidden px-2 py-2 gap-4">
-            <div 
-                onClick={() => window.open(liveLink, "_blank")}
-            >
-            <SquareArrowOutUpRight className="h-8 w-8
-             bg-gradient-to-r from-violet-600 to-indigo-500 p-2 rounded-full" />
-            </div>
-<div 
-   onClick={() => window.open(codeLink, "_blank")}
-> 
-<Code className="h-8 w-8
-             bg-gradient-to-r from-violet-600 to-indigo-500 p-2 rounded-full" />
-</div>
-          </div>
+            Live
+          </motion.a>
+          <motion.a
+            href={codeLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex-1 flex items-center justify-center px-4 py-2 text-sm font-medium border border-slate-700 dark:text-slate-300 rounded-lg hover:bg-slate-800/50 transition-colors"
+          >
+            View Code
+          </motion.a>
         </div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

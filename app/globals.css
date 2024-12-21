@@ -70,6 +70,21 @@
   }
 }
 
+
+@keyframes border-slide {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 130% 50%;
+  }
+}
+
+.animate-border-slide {
+  background-size: 300% 100%;
+  animation: border-slide 3s linear infinite;
+}
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }

@@ -128,12 +128,20 @@ export const EXPERIENCE_DATA = [
   },
   {
     id:2,
-    title:"Developing Web Applications",
-    company:"Developing Experience of more than 2 years",
-    description:"I have been developing web applications for more than 2 years. I have experience in developing web applications using React, NextJs, and TailwindCSS. I have also worked on backend technologies like NodeJs, ExpressJs, and MongoDB. I have also worked on cloud technologies like Cloudflare Workers and Docker.",
-    date:"2022 - present",
+    title:"Freelance Work Experience",
+    company:"Developing Experience of more than 3 Months",
+    description:"As a freelancer, I have been developing web applications for over 3 Months. My expertise includes building web applications using the MERN stack (MongoDB, ExpressJs, React, NodeJs) and NextJs.",
+    date:"September 2024 - present",
     image:'/experience/avatar.svg'
-  }
+  },
+  // {
+  //   id:3,
+  //   title:"Developing Web Applications",
+  //   company:"Developing Experience of more than 2 years",
+  //   description:"I have been developing web applications for more than 2 years. I have experience in developing web applications using React, NextJs, and TailwindCSS. I have also worked on backend technologies like NodeJs, ExpressJs, and MongoDB. I have also worked on cloud technologies like Cloudflare Workers and Docker.",
+  //   date:"2022 - present",
+  //   image:'/experience/avatar.svg'
+  // }
 ]
 
 
