@@ -48,13 +48,18 @@ const  switzer = localFont({
   display:'swap'
 });
 
+const riffic = localFont({
+  src:"./fonts/RifficFree-Bold.ttf",
+  variable:'--font-riffic',
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${switzer.variable} ${inter.variable} `}>
+    <html lang="en" className={`${switzer.variable} ${inter.variable} ${riffic.variable}`}>
       <body className=" =scroll-smooth" >
         <Providers>
      

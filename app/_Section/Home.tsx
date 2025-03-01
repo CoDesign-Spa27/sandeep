@@ -9,7 +9,7 @@ import LINKEDIN from "@/public/linkedin.svg";
 import GMAIL from "@/public/gmail.svg";
 import MEDIUM from "@/public/medium.svg";
 import MEDIUMDARK from "@/public/medium-dark.svg";
-
+import squareSvg from "@/public/home/sqaure.svg";
 import { motion } from "framer-motion";  
 import { useTheme } from "next-themes";
 import Link from "next/link";
@@ -117,14 +117,13 @@ const Home = () => {
     >
       <div className="flex items-center justify-between">
         <div>
-     
-          <motion.div
-            className="md:text-6xl text-2xl sm:text-4xl font-black"
-            variants={containerVariants}
-          >
-            Hi! I am Sandeep Singh.
-          </motion.div>
-
+        <motion.div
+  className="md:text-6xl text-2xl sm:text-4xl font-black font-riffic relative"
+  variants={containerVariants}
+>
+ 
+  Hi! I am Sandeep Singh.
+</motion.div>
       
           <motion.div className="py-2 sm:text-lg text-sm font-mono" variants={textVariants}>
             <Balancer>

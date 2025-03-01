@@ -126,6 +126,7 @@ const config = {
       fontFamily: {
         switzer: [`var(--font-switzer)`],
         inter: ["var(--font-inter)"],
+        riffic: ["var(--font-riffic)"],
       },
     },
   },
