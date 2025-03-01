@@ -80,7 +80,7 @@ const ExperienceCard = ({
               </motion.div>
             </div>
             <div className="flex items-center gap-3">
-              <div className="bg-black rounded-full p-1">
+              <div className="bg-gray-900 rounded-full p-1">
                 <Image src={image} width={10} height={10} className="w-7 h-7" alt="logo" />
               </div>
               <div className="text-sm py-2">{company}</div>

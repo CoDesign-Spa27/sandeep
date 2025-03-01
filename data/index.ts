@@ -128,20 +128,28 @@ export const EXPERIENCE_DATA = [
   },
   {
     id:2,
-    title:"Freelance Work Experience",
+    title:"Part-Time Freelance Work Experience",
     company:"Developing Experience of more than 3 Months",
     description:"As a freelancer, I have been developing web applications for over 3 Months. My expertise includes building web applications using the MERN stack (MongoDB, ExpressJs, React, NodeJs) and NextJs.",
     date:"September 2024 - present",
     image:'/experience/avatar.svg'
   },
-  // {
-  //   id:3,
-  //   title:"Developing Web Applications",
-  //   company:"Developing Experience of more than 2 years",
-  //   description:"I have been developing web applications for more than 2 years. I have experience in developing web applications using React, NextJs, and TailwindCSS. I have also worked on backend technologies like NodeJs, ExpressJs, and MongoDB. I have also worked on cloud technologies like Cloudflare Workers and Docker.",
-  //   date:"2022 - present",
-  //   image:'/experience/avatar.svg'
-  // }
+  {
+    id:3,
+    title:"Frontend Developer Intern",
+    company:"Studio137",
+    description:"As a Frontend Developer at Studio137, I specialized in creating responsive and intuitive user interfaces using React and Next.js. Implemented modern design systems with TailwindCSS, enhanced website performance through optimization techniques, and collaborated with the design team to deliver pixel-perfect implementations. Developed reusable components and maintained code quality through best practices.",
+    date:"October 2024 - January 2025",
+    image:'/experience/studio137-logo.png'
+  },
+  {
+    id:4,
+    title:"Frontend Developer",
+    company:"Autowhale",
+    description:"As a Frontend Developer at Autowhale, I developed sophisticated user interfaces for a crypto trading execution platform using React. Focused on creating responsive layouts and optimizing performance for handling high-frequency data updates. Collaborated with backend teams to integrate trading APIs and ensure seamless user experience for crypto traders. Implemented Limited partner dashboard and enhanced the user experience.",
+    date:"January 2025 - Present",
+    image:'/experience/autowhale.png'
+  }
 ]
 
 
