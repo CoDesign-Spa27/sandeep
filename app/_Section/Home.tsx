@@ -115,6 +115,9 @@ const Home = () => {
       animate="visible"
       variants={containerVariants}
     >
+         <div className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-500 md:text-6xl text-2xl sm:text-4xl font-black font-riffic relative">
+          @Rooh
+         </div>
       <div className="flex items-center justify-between">
         <div>
         <motion.div

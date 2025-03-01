@@ -129,7 +129,7 @@ export const EXPERIENCE_DATA = [
   {
     id:2,
     title:"Part-Time Freelance Work Experience",
-    company:"Developing Experience of more than 3 Months",
+    company:"Developing Web Applications",
     description:"As a freelancer, I have been developing web applications for over 3 Months. My expertise includes building web applications using the MERN stack (MongoDB, ExpressJs, React, NodeJs) and NextJs.",
     date:"September 2024 - present",
     image:'/experience/avatar.svg'
