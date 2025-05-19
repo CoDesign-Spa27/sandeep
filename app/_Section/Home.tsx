@@ -10,14 +10,13 @@ import GMAIL from "@/public/gmail.svg";
 import MEDIUM from "@/public/medium.svg";
 import MEDIUMDARK from "@/public/medium-dark.svg";
 import squareSvg from "@/public/home/sqaure.svg";
-import { motion } from "framer-motion";  
+import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 
 const Home = () => {
   const { theme } = useTheme();
 
-  
   const social = [
     {
       id: 1,
@@ -51,9 +50,8 @@ const Home = () => {
     },
   ];
 
- 
   const containerVariants = {
-    hidden: { opacity: 0, x: -100 }, 
+    hidden: { opacity: 0, x: -100 },
     visible: {
       opacity: 1,
       x: 0,
@@ -67,7 +65,7 @@ const Home = () => {
   };
 
   const imageVariants = {
-    hidden: { opacity: 0, x: 100 },  
+    hidden: { opacity: 0, x: 100 },
     visible: {
       opacity: 1,
       x: 0,
@@ -81,7 +79,7 @@ const Home = () => {
   };
 
   const textVariants = {
-    hidden: { opacity: 0, y: 50 }, 
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
@@ -95,7 +93,7 @@ const Home = () => {
   };
 
   const socialVariants = {
-    hidden: { opacity: 0, y: 100 },  
+    hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
       y: 0,
@@ -115,54 +113,60 @@ const Home = () => {
       animate="visible"
       variants={containerVariants}
     >
-         <div className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-500 md:text-6xl text-2xl sm:text-4xl font-black font-riffic relative">
-          @Rooh
-         </div>
+      <div className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-500 md:text-6xl text-2xl sm:text-4xl font-black font-riffic relative">
+        @Rooh
+      </div>
       <div className="flex items-center justify-between">
         <div>
-        <motion.div
-  className="md:text-6xl text-2xl sm:text-4xl font-black font-riffic relative"
-  variants={containerVariants}
->
- 
-  Hi! I am Sandeep Singh.
-</motion.div>
-      
-          <motion.div className="py-2 sm:text-lg text-sm font-mono" variants={textVariants}>
+          <motion.div
+            className="md:text-6xl text-2xl sm:text-4xl font-black font-riffic relative"
+            variants={containerVariants}
+          >
+            Hi! I am Sandeep Singh.
+          </motion.div>
+
+          <motion.div
+            className="py-2 sm:text-lg text-sm font-mono"
+            variants={textVariants}
+          >
             <Balancer>
               Full-Stack Developer | Passionate about building innovative web
               applications.
             </Balancer>
             <div className="my-2 gap-5 flex items-center">
               <motion.span
-              onClick={() => window.open("https://www.grindcode.live", "_blank")}
+                onClick={() =>
+                  window.open("https://www.grindcode.live", "_blank")
+                }
                 className="bg-gray-400 cursor-pointer hover:bg-neutral-800 hover:text-white transition-all duration-300 text-neutral-900 p-1"
               >
                 GrindCode
               </motion.span>
-              
+              {/*               
               <motion.span
                 className="bg-gray-400 cursor-pointer  hover:bg-neutral-800 hover:text-white transition-all duration-300 text-neutral-900 p-1" 
               >
                 QuickShiksha
-              </motion.span>
-<Link href={"/blogs"}>
-              <motion.span
-                className="bg-green-400 cursor-pointer  hover:bg-neutral-800 hover:text-white transition-all duration-300 text-neutral-900 px-2 py-1" 
-                >
-                Blogs
-              </motion.span>
-                </Link>
+              </motion.span> */}
+              <Link href={"/blogs"}>
+                <motion.span className="bg-green-400 cursor-pointer  hover:bg-neutral-800 hover:text-white transition-all duration-300 text-neutral-900 px-2 py-1">
+                  Blogs
+                </motion.span>
+              </Link>
             </div>
           </motion.div>
-       
+
           <motion.div variants={socialVariants}>
             <AnimatedTooltip items={social} />
           </motion.div>
         </div>
- 
+
         <motion.div className="rounded-full" variants={imageVariants}>
-          <Image className="md:w-48 rounded-full w-56" src={Profile} alt="logo" />
+          <Image
+            className="md:w-48 rounded-full w-56"
+            src={Profile}
+            alt="logo"
+          />
         </motion.div>
       </div>
     </motion.div>
