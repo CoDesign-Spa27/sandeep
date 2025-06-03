@@ -26,9 +26,9 @@ const Home = () => {
     },
     {
       id: 2,
-      name: "sandeep_code28",
+      name: "rooh_builds",
       image: X,
-      link: "https://x.com/sandeep_code28",
+      link: "https://x.com/rooh_builds",
     },
     {
       id: 3,
