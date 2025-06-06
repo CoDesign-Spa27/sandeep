@@ -9,10 +9,11 @@ import LINKEDIN from "@/public/linkedin.svg";
 import GMAIL from "@/public/gmail.svg";
 import MEDIUM from "@/public/medium.svg";
 import MEDIUMDARK from "@/public/medium-dark.svg";
-import squareSvg from "@/public/home/sqaure.svg";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import { FeaturedWork } from "@/components/FeaturedWorked";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 const Home = () => {
   const { theme } = useTheme();
@@ -50,126 +51,131 @@ const Home = () => {
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0, x: -100 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        type: "spring",
-        stiffness: 50,
-        damping: 20,
-        delay: 0.2,
-      },
+  const fadeInUp = {
+    hidden: { 
+      opacity: 0, 
+      y: 30,
+      filter: "blur(4px)"
     },
-  };
-
-  const imageVariants = {
-    hidden: { opacity: 0, x: 100 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 20,
-        delay: 0.4,
-      },
-    },
-  };
-
-  const textVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
+    visible: (delay = 0) => ({
       opacity: 1,
       y: 0,
+      filter: "blur(0px)",
       transition: {
-        type: "spring",
-        stiffness: 50,
-        damping: 20,
-        delay: 0.6,
-      },
-    },
+        duration: 0.8,
+        delay: delay * 0.2,
+        ease: [0.25, 0.46, 0.45, 0.94]
+      }
+    })
   };
 
-  const socialVariants = {
-    hidden: { opacity: 0, y: 100 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 50,
-        damping: 20,
-        delay: 0.8,
-      },
+  const slideIn = {
+    hidden: { 
+      opacity: 0, 
+      x: -20,
+      filter: "blur(2px)"
     },
+    visible: (delay = 0) => ({
+      opacity: 1,
+      x: 0,
+      filter: "blur(0px)",
+      transition: {
+        duration: 0.6,
+        delay: delay * 0.15,
+        ease: [0.25, 0.46, 0.45, 0.94]
+      }
+    })
   };
 
   return (
-    <motion.div
-      className="w-full h-full"
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-    >
-      <div className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-500 md:text-6xl text-2xl sm:text-4xl font-black font-riffic relative">
-        @Rooh
-      </div>
-      <div className="flex items-center justify-between">
-        <div>
-          <motion.div
-            className="md:text-6xl text-2xl sm:text-4xl font-black font-riffic relative"
-            variants={containerVariants}
-          >
-            Hi! I am Sandeep Singh.
-          </motion.div>
+    <div className="min-h-screen flex items-center justify-center px-6 py-12">
+      <div className="max-w-4xl w-full">
+        <div className="space-y-12 p-4">
+          {/* Hero Section */}
+          <div className="relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800 p-8">
+              <BorderBeam duration={8} size={100} />
+            <div className="space-y-8">
+              <motion.div
+                className="space-y-2"
+                initial="hidden"
+                animate="visible"
+                variants={fadeInUp}
+                custom={0}
+              >
+                <h1 className="text-5xl md:text-7xl font-light tracking-tight">
+                  <span className="text-gray-900 dark:text-white">Sandeep</span>
+                  <span className="text-[#ffaa40]">&nbsp;Singh</span>
+                </h1>
+              </motion.div>
 
-          <motion.div
-            className="py-2 sm:text-lg text-sm font-mono"
-            variants={textVariants}
-          >
-            <Balancer>
-              Full-Stack Developer | Passionate about building innovative web
-              applications.
-            </Balancer>
-            <div className="my-2 gap-5 flex items-center">
-              <motion.span
-                onClick={() =>
-                  window.open("https://www.grindcode.live", "_blank")
-                }
-                className="bg-gray-400 cursor-pointer hover:bg-neutral-800 hover:text-white transition-all duration-300 text-neutral-900 p-1"
-              >
-                GrindCode
-              </motion.span>
-              {/*               
-              <motion.span
-                className="bg-gray-400 cursor-pointer  hover:bg-neutral-800 hover:text-white transition-all duration-300 text-neutral-900 p-1" 
-              >
-                QuickShiksha
-              </motion.span> */}
-              <Link href={"/blogs"}>
-                <motion.span className="bg-green-400 cursor-pointer  hover:bg-neutral-800 hover:text-white transition-all duration-300 text-neutral-900 px-2 py-1">
-                  Blogs
-                </motion.span>
-              </Link>
+              <motion.div
+                className="w-16 h-px bg-gradient-to-r from-gray-400 to-transparent"
+                initial={{ width: 0, opacity: 0 }}
+                animate={{ width: 64, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+              />
             </div>
-          </motion.div>
 
-          <motion.div variants={socialVariants}>
+            <motion.div
+              className="space-y-6 mt-8  "
+              initial="hidden"
+              animate="visible"
+              variants={fadeInUp}
+              custom={1}
+            >
+              <div className="space-y-4">
+                <h2 className="text-xl md:text-2xl font-light text-gray-700 dark:text-gray-300 leading-relaxed">
+                  <Balancer>
+                    Full-Stack Developer crafting innovative web experiences 
+                    with precision and passion.
+                  </Balancer>
+                </h2>
+                
+                <p className="text-gray-500 dark:text-gray-400 font-mono text-sm leading-relaxed">
+                  Currently building digital solutions that bridge 
+                  creativity and functionality.
+                </p>
+              </div>
+            </motion.div>
+
+          </div>
+
+          {/* Featured Work Section */}
+          <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-8">
+            <FeaturedWork />
+          </div>
+
+          {/* Connect Section */}
+          <motion.div
+            className="space-y-6 rounded-2xl border border-gray-200 dark:border-gray-800 p-8"
+            initial="hidden"
+            animate="visible"
+            variants={fadeInUp}
+            custom={3}
+          >
+            <div className="text-xs font-mono text-gray-400 tracking-wider uppercase">
+              Connect
+            </div>
+            
             <AnimatedTooltip items={social} />
           </motion.div>
-        </div>
 
-        <motion.div className="rounded-full" variants={imageVariants}>
-          <Image
-            className="md:w-48 rounded-full w-56"
-            src={Profile}
-            alt="logo"
-          />
-        </motion.div>
+          {/* Footer Section */}
+          <motion.div
+            className="rounded-2xl border border-gray-200 dark:border-gray-800 p-8"
+            initial="hidden"
+            animate="visible"
+            variants={slideIn}
+            custom={4}
+          >
+            <div className="flex items-center justify-between text-xs font-mono text-gray-400">
+              <span>Based in India</span>
+              <span>Available for projects</span>
+            </div>
+          </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
