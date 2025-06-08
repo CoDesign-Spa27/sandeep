@@ -19,8 +19,8 @@ function Landing() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-background antialiased max-w-5xl mx-auto py-10 sm:py-12 px-6 transition-all bg-[#001100] font-switzer">
-      <div className="flex flex-col gap-5">
+    <div className="min-h-screen bg-background antialiased max-w-5xl mx-auto py-10 sm:py-6 px-6 transition-all bg-[#001100] font-switzer">
+      <div className="flex flex-col gap-20">
           <Suspense fallback={<div>
             <div className="flex justify-center items-center h-screen">
               <Loading />

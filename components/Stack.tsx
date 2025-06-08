@@ -32,11 +32,11 @@ const Stack = () => {
   };
 
   return (
-    <section className="w-full py-20 px-6">
+    <section className="w-full  px-6">
       <div className="max-w-4xl mx-auto">
          
         <motion.div
-          className="mb-16 space-y-4"
+          className="mb-10 space-y-4"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
