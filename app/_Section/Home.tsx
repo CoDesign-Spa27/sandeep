@@ -88,41 +88,42 @@ const Home = () => {
   };
 
   return (
-    <div className="flex items-center justify-center px-6 py-8">
+    <div className="flex items-center justify-center px-0 sm:px-6 py-8">
       <div className="max-w-4xl w-full">
-        <div className="p-4">
+        <div className="">
           <div className="relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800 p-8">
               <BorderBeam duration={8} size={100} />
             <div className="space-y-8">
               <motion.div
-                className="space-y-2"
                 initial="hidden"
                 animate="visible"
                 variants={fadeInUp}
                 custom={0}
               >
-                <h1 className="text-5xl md:text-7xl font-light tracking-tight">
+                <h1 className="text-5xl md:text-7xl font-light tracking-tight flex flex-col sm:flex-row items-start sm:space-x-4">
                   <span className="text-gray-900 dark:text-white">Sandeep</span>
-                  <span className="text-[#ffaa40]">&nbsp;Singh</span>
+                  <span className="text-[#ffaa40]">Singh</span>
                 </h1>
               </motion.div>
 
-              <div className="flex items-center gap-4">
-                <motion.div
-                  className="w-16 h-px bg-gradient-to-r from-gray-400 to-transparent"
-                  initial={{ width: 0, opacity: 0 }}
-                  animate={{ width: 64, opacity: 1 }}
-                  transition={{ duration: 1, delay: 0.5 }}
-                />
-                <motion.span
-                  className="text-sm font-medium bg-gradient-to-r from-[#9c40ff]/20 to-[#ffaa40]/10 px-3 py-1 rounded-full border border-[#ffaa40]/30"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.8 }}
-                >
-                  Frontend Developer
-                </motion.span>
-            <FeaturedWork />
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <div className="flex items-center gap-4">
+                  <motion.div
+                    className="w-16 h-px bg-gradient-to-r from-gray-400 to-transparent sm:block hidden"
+                    initial={{ width: 0, opacity: 0 }}
+                    animate={{ width: 64, opacity: 1 }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                  />
+                  <motion.span
+                    className="text-sm font-medium bg-gradient-to-r from-[#9c40ff]/20 to-[#ffaa40]/10 px-3 py-1 rounded-full border border-[#ffaa40]/30"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.8 }}
+                  >
+                    Frontend Developer
+                  </motion.span>
+                </div>
+                <FeaturedWork />
               </div>
             </div>
 
