@@ -91,8 +91,16 @@ const Home = () => {
     <div className="flex items-center justify-center px-0 sm:px-6 py-8">
       <div className="max-w-4xl w-full">
         <div className="">
-          <div className="relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800 p-8">
-              <BorderBeam duration={8} size={100} />
+          <div className="relative overflow-hidden rounded-2xl p-8">
+              <BorderBeam 
+                duration={12} 
+                size={150} 
+                delay={0.5}
+                transition={{
+                  ease: "easeInOut",
+                  repeatType: "reverse"
+                }}
+              />
             <div className="space-y-8">
               <motion.div
                 initial="hidden"
