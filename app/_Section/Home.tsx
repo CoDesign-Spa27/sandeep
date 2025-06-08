@@ -88,10 +88,9 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-6 py-12">
+    <div className="flex items-center justify-center px-6 py-8">
       <div className="max-w-4xl w-full">
-        <div className="space-y-12 p-4">
-          {/* Hero Section */}
+        <div className="p-4">
           <div className="relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800 p-8">
               <BorderBeam duration={8} size={100} />
             <div className="space-y-8">
@@ -108,12 +107,23 @@ const Home = () => {
                 </h1>
               </motion.div>
 
-              <motion.div
-                className="w-16 h-px bg-gradient-to-r from-gray-400 to-transparent"
-                initial={{ width: 0, opacity: 0 }}
-                animate={{ width: 64, opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-              />
+              <div className="flex items-center gap-4">
+                <motion.div
+                  className="w-16 h-px bg-gradient-to-r from-gray-400 to-transparent"
+                  initial={{ width: 0, opacity: 0 }}
+                  animate={{ width: 64, opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                />
+                <motion.span
+                  className="text-sm font-medium bg-gradient-to-r from-[#9c40ff]/20 to-[#ffaa40]/10 px-3 py-1 rounded-full border border-[#ffaa40]/30"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.8 }}
+                >
+                  Frontend Developer
+                </motion.span>
+            <FeaturedWork />
+              </div>
             </div>
 
             <motion.div
@@ -136,43 +146,14 @@ const Home = () => {
                   creativity and functionality.
                 </p>
               </div>
-            </motion.div>
-
-          </div>
-
-          {/* Featured Work Section */}
-          <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-8">
-            <FeaturedWork />
-          </div>
-
-          {/* Connect Section */}
-          <motion.div
-            className="space-y-6 rounded-2xl border border-gray-200 dark:border-gray-800 p-8"
-            initial="hidden"
-            animate="visible"
-            variants={fadeInUp}
-            custom={3}
-          >
-            <div className="text-xs font-mono text-gray-400 tracking-wider uppercase">
-              Connect
-            </div>
-            
-            <AnimatedTooltip items={social} />
-          </motion.div>
-
-          {/* Footer Section */}
-          <motion.div
-            className="rounded-2xl border border-gray-200 dark:border-gray-800 p-8"
-            initial="hidden"
-            animate="visible"
-            variants={slideIn}
-            custom={4}
-          >
+          <AnimatedTooltip items={social} />
             <div className="flex items-center justify-between text-xs font-mono text-gray-400">
               <span>Based in India</span>
               <span>Available for projects</span>
             </div>
-          </motion.div>
+            </motion.div>
+
+          </div>
         </div>
       </div>
     </div>
