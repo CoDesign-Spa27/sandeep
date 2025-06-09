@@ -95,7 +95,7 @@ const Home = () => {
             <div className="absolute inset-0 rounded-[inherit] border border-transparent [mask-clip:padding-box,border-box] [mask-composite:intersect] [mask-image:linear-gradient(transparent,transparent),linear-gradient(#000,#000)]">
               <div className="absolute inset-0 bg-gradient-to-br from-[#ffaa40] via-transparent to-[#9c40ff] opacity-70 scale-[1.004]"></div>
             </div>
-            <BorderBeam size={100}/>
+            <BorderBeam size={100} />
             <div className="space-y-8">
               <motion.div
                 initial="hidden"
@@ -109,45 +109,45 @@ const Home = () => {
                 </h1>
               </motion.div>
 
-<div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 relative z-10">
-  <div className="flex items-center gap-4">
-    <motion.div
-      className="w-16 h-px bg-gradient-to-r from-gray-400 to-transparent sm:block hidden"
-      initial={{ width: 0, opacity: 0 }}
-      animate={{ width: 64, opacity: 1 }}
-      transition={{ duration: 1, delay: 0.5 }}
-    />
-  </div>
-  <FeaturedWork />
-</div>
-
-            <motion.div
-              className="mt-8"
-              initial="hidden"
-              animate="visible"
-              variants={fadeInUp}
-              custom={1}
-              >
-              <div className="space-y-4">
-                <h2 className="text-xl md:text-2xl font-light text-gray-700 dark:text-gray-300 leading-relaxed">
-                  <Balancer>
-                    Full-Stack Developer crafting innovative web experiences
-                    with precision and passion.
-                  </Balancer>
-                </h2>
-
-                <p className="text-gray-500 dark:text-gray-400 font-mono text-sm leading-relaxed">
-                  Currently building digital solutions that bridge creativity
-                  and functionality.
-                </p>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 relative z-10">
+                <div className="flex items-center gap-4">
+                  <motion.div
+                    className="w-16 h-px bg-gradient-to-r from-gray-400 to-transparent sm:block hidden"
+                    initial={{ width: 0, opacity: 0 }}
+                    animate={{ width: 64, opacity: 1 }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                  />
+                </div>
+                <FeaturedWork />
               </div>
-            </motion.div>
+
+              <motion.div
+                className="mt-8"
+                initial="hidden"
+                animate="visible"
+                variants={fadeInUp}
+                custom={1}
+              >
+                <div className="space-y-4">
+                  <h2 className="text-xl md:text-2xl font-light text-gray-700 dark:text-gray-300 leading-relaxed">
+                    <Balancer>
+                      Full-Stack Developer crafting innovative web experiences
+                      with precision and passion.
+                    </Balancer>
+                  </h2>
+
+                  <p className="text-gray-500 dark:text-gray-400 font-mono text-sm leading-relaxed">
+                    Currently building digital solutions that bridge creativity
+                    and functionality.
+                  </p>
+                </div>
+              </motion.div>
               <AnimatedTooltip items={social} />
               <div className="flex items-center justify-between text-xs font-mono text-gray-400">
                 <span>Based in India</span>
                 <span>Available for projects</span>
               </div>
-              </div>
+            </div>
           </div>
         </div>
       </div>
