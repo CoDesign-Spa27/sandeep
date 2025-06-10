@@ -93,10 +93,10 @@ const ExperienceCard = ({
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-between">
+          <div className="flex flex-col py-2 items-center justify-between">
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-color1 to-color2 rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
-              <div className="relative px-4 py-1.5  rounded-xl">
+              <div className="relative px-2 py-1  rounded-xl">
                 <span className="text-sm font-mono text-gray-600 dark:text-gray-300 tracking-wide">
                   {date}
                 </span>
