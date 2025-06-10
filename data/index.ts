@@ -160,8 +160,9 @@ export const PROJECTS_DATA = [
     video: "https://res.cloudinary.com/dvancfols/video/upload/v1727342449/projects/hfbc8dws7eikzfpqum3b.mp4",
     description: "GrindCode is a place for Developers and coders to grind together.Meet random coders around the world in just one click.",
 technologies: ["NextJs", "TailwindCSS", "Typescript", "Stream","PostgreSQL", "Dribble", "Docker","Framer-motion","Zod","Shadcn"],
-    liveLink: "https://grind-code.vercel.app/",
-    codeLink:"https://github.com/CoDesign-Spa27/GrindCode"
+    liveLink: "https://grindcode.live/",
+    codeLink:"https://github.com/CoDesign-Spa27/GrindCode",
+    imageUrl: "/Projects/grindcode.png",
   },
   {
     id:2,
@@ -170,7 +171,8 @@ technologies: ["NextJs", "TailwindCSS", "Typescript", "Stream","PostgreSQL", "Dr
     description:"Rubber is a tool that empowers developers to create documentation and diagrams quickly using a minimal UI, keyboard-driven workflows, markdown, and diagram-as-code.",
     technologies:["NextJs","Typescript","Convex","TailwindCSS"],
     liveLink:"https://rubber-tau.vercel.app/",
-    codeLink:"https://github.com/CoDesign-Spa27/Rubber"
+    codeLink:"https://github.com/CoDesign-Spa27/Rubber",
+    imageUrl: "/Projects/rubber.png",
   },
   {
     id:3,
@@ -179,7 +181,8 @@ technologies: ["NextJs", "TailwindCSS", "Typescript", "Stream","PostgreSQL", "Dr
     description:"ShareKro is a platform where you can explore, share, and download images and more. With Masonry layout, you can explore images in a beautiful way.",
     technologies:["ReactJs","TailwindCSS","Sanity","Javascript"],
     liveLink:"https://sharekro.netlify.app/",
-    codeLink:"https://github.com/CoDesign-Spa27/share_kro"
+    codeLink:"https://github.com/CoDesign-Spa27/share_kro",
+    imageUrl: "/Projects/sharekro.svg",
   }
 ]
 
