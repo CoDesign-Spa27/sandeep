@@ -109,7 +109,7 @@ const GetInTouchForm = () => {
               </FormItem>
             )}
           />
-          <Button type="submit">
+          <Button className="text-sm font-medium bg-gradient-to-r from-[#9c40ff]/20 to-[#ffaa40]/10 px-3 py-1 rounded-full border border-[#ffaa40]/30" type="submit" variant='ghost'>
             {loading ? (
               <>
                 Sending
