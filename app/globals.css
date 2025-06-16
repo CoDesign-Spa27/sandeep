@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background:250 70% 97%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -34,7 +34,7 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 550 84% 4.9%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -116,7 +116,7 @@ html::-webkit-scrollbar-thumb:hover {
 /* Custom scrollbar for Firefox */
 html {
   scrollbar-width: thin; /* Makes the scrollbar thinner */
-  scrollbar-color: #6042E8 #1e1e1e; /* Thumb color and track color */
+  scrollbar-color: #ffaa40 #1e1e1e; /* Thumb color and track color */
 }
 
 
