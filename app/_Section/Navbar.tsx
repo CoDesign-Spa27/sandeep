@@ -50,14 +50,14 @@ const Navbar: React.FC<NavbarProps> = ({
   }
   return (
     <motion.div
-      className="w-full max-w-2xl"
+      className="w-full"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
       <div className="flex items-center justify-center">
         <div className="sm:flex  items-center justify-between">
-          <div className="flex gap-3 pl-7 items-center p-3">
+          <div className="flex gap-3 items-center p-3">
             <div className="flex items-center gap-2">
               {tabs.map((tab) => (
                 <Chip
@@ -72,7 +72,6 @@ const Navbar: React.FC<NavbarProps> = ({
 
           <div>
             <div className="flex items-center justify-center gap-5 sm:justify-between p-3">
-              <ModeToggle />
               <DownloadResumeButton />
             </div>
           </div>

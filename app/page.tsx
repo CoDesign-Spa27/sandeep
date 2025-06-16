@@ -16,38 +16,44 @@ function Landing() {
 
   useEffect(() => {
     setMounted(true);
-  }, [])
+  }, []);
 
   return (
-    <div className="min-h-screen  antialiased max-w-5xl mx-auto py-10 sm:py-6 px-6 transition-all  font-switzer">
-      <div className="flex flex-col gap-20">
-          <Suspense fallback={<div>
-            <div className="flex justify-center items-center h-screen">
-              <Loading />
+    <div className="min-h-screen  antialiased max-w-5xl mx-auto py-5 sm:py-6 px-6 transition-all  font-switzer">
+      <div className="flex flex-col gap-10">
+        <Suspense
+          fallback={
+            <div>
+              <div className="flex justify-center items-center h-screen">
+                <Loading />
+              </div>
+            </div>
+          }
+        >
+          <div>
+            <Navbar
+              homeRef={homeRef}
+              projectsRef={projectsRef}
+              experienceRef={experienceRef}
+            />
           </div>
-          </div>}>
-        <div>
-          <Navbar
-            homeRef={homeRef}
-            projectsRef={projectsRef}
-            experienceRef={experienceRef}
-          />
-        </div>
-          <section ref={homeRef}>
-            <Home />
-          </section>
-          <section>
-            <TechStack />
-          </section>
-          <section ref={experienceRef}>
-            <Experience />
-          </section>
-          <section ref={projectsRef}>
-            <Projects />
-          </section>
-          <section>
-            <ContactMe />
-          </section>
+          <div className="flex flex-col gap-20">
+            <section ref={homeRef}>
+              <Home />
+            </section>
+            <section>
+              <TechStack />
+            </section>
+            <section ref={experienceRef}>
+              <Experience />
+            </section>
+            <section ref={projectsRef}>
+              <Projects />
+            </section>
+            <section>
+              <ContactMe />
+            </section>
+          </div>
         </Suspense>
       </div>
     </div>
@@ -56,18 +62,14 @@ function Landing() {
 
 export default memo(Landing);
 
-
-function Loading(){
-  return <div>
-   <div className="flex-col gap-4 w-full flex items-center justify-center">
-  <div
-    className="w-20 h-20 border-4 border-transparent text-blue-400 text-4xl animate-spin flex items-center justify-center border-t-blue-400 rounded-full"
-  >
-    <div
-      className="w-16 h-16 border-4 border-transparent text-red-400 text-2xl animate-spin flex items-center justify-center border-t-red-400 rounded-full"
-    ></div>
-  </div>
-</div>
-
-  </div>
+function Loading() {
+  return (
+    <div>
+      <div className="flex-col gap-4 w-full flex items-center justify-center">
+        <div className="w-20 h-20 border-4 border-transparent text-blue-400 text-4xl animate-spin flex items-center justify-center border-t-blue-400 rounded-full">
+          <div className="w-16 h-16 border-4 border-transparent text-red-400 text-2xl animate-spin flex items-center justify-center border-t-red-400 rounded-full"></div>
+        </div>
+      </div>
+    </div>
+  );
 }
