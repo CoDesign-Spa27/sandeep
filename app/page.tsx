@@ -3,12 +3,14 @@ import { useRef, Suspense, memo, useEffect, useState } from "react";
 import Navbar from "./_Section/Navbar";
 import React from "react";
 import ContactMe from "./_Section/ContactMe";
+import { useRouter } from "next/navigation";
 const Home = React.lazy(() => import("./_Section/Home"));
 const TechStack = React.lazy(() => import("./_Section/TechStack"));
 const Experience = React.lazy(() => import("./_Section/Experience"));
 const Projects = React.lazy(() => import("./_Section/Projects"));
 
 function Landing() {
+  const router = useRouter();
   const homeRef = useRef(null);
   const experienceRef = useRef(null);
   const projectsRef = useRef(null);
@@ -16,17 +18,31 @@ function Landing() {
 
   useEffect(() => {
     setMounted(true);
-  }, []);
+    // Force a client-side refresh on first mount
+    if (typeof window !== 'undefined') {
+      const hasRefreshed = sessionStorage.getItem('hasRefreshed');
+      if (!hasRefreshed) {
+        sessionStorage.setItem('hasRefreshed', 'true');
+        router.refresh();
+      }
+    }
+  }, [router]);
+
+  if (!mounted) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <Loading />
+      </div>
+    );
+  }
 
   return (
-    <div className="min-h-screen  antialiased max-w-5xl mx-auto py-5 sm:py-6 px-6 transition-all  font-switzer">
+    <div className="min-h-screen antialiased max-w-5xl mx-auto py-5 sm:py-6 px-6 transition-all font-switzer">
       <div className="flex flex-col gap-10">
         <Suspense
           fallback={
-            <div>
-              <div className="flex justify-center items-center h-screen">
-                <Loading />
-              </div>
+            <div className="flex justify-center items-center h-screen">
+              <Loading />
             </div>
           }
         >
