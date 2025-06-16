@@ -51,14 +51,14 @@ export const ProjectCard = ({
           <h3
             className={`
               text-2xl font-bold transition-all duration-300
-              ${isHovered ? "text-color1" : "text-white"}
+              ${isHovered ? "text-color1" : ""}
             `}
           >
             {name}
             <span className="block w-10 h-0.5 bg-color1 mt-2 transition-all duration-500 origin-left scale-x-0 group-hover:scale-x-100"></span>
           </h3>
  
-          <p className="text-sm text-gray-300/90 leading-relaxed line-clamp-4">
+          <p className="text-sm leading-relaxed line-clamp-4">
             {description}
           </p>
 
