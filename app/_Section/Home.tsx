@@ -14,6 +14,7 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import { FeaturedWork } from "@/components/FeaturedWorked";
 import { BorderBeam } from "@/components/ui/border-beam";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const Home = () => {
   const { theme } = useTheme();
@@ -97,6 +98,7 @@ const Home = () => {
             </div>
             <BorderBeam size={100} />
             <div className="space-y-8">
+              <div className="flex justify-between items-center">
               <motion.div
                 initial="hidden"
                 animate="visible"
@@ -108,6 +110,8 @@ const Home = () => {
                   <span className="text-[#ffaa40] font-black">Singh</span>
                 </h1>
               </motion.div>
+              <ModeToggle />
+                </div>
 
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 relative z-10">
                 <div className="flex items-center gap-4">
