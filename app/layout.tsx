@@ -65,10 +65,10 @@ export const metadata: Metadata = {
     title: "Sandeep Singh - Frontend Engineer | Wanna Be Software Developer",
     description:
       "developer by day, frontend enthusiast by choice, and a wannabe software engineer trying to make it look easy",
-    images: ["/og-image.png"],
+    images: ["./og-image.png"],
   },
   other: {
-    "twitter:image": ["/og-image.png"],
+    "twitter:image": ["./og-image.png"],
     "twitter:card": "summary_large_image",
     "twitter:url": "https://sandeepsingh.me/",
     "twitter:domain": "sandeepsingh.me",
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
       "Sandeep Singh - Frontend Engineer | Wanna Be Software Developer",
     "og:description":
       "developer by day, frontend enthusiast by choice, and a wannabe software engineer trying to make it look easy",
-    "og:image": ["/og-image.png"],
+    "og:image": ["./og-image.png"],
   },
   robots: {
     index: true,
